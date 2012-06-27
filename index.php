@@ -2,7 +2,7 @@
 <center><table cellpadding='2' cellspacing='0' border='0' id='ap_table'>
 <tr><td bgcolor="blue"><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td bgcolor="blue" align=center style="padding:2;padding-bottom:4"><b><font size=-1 color="white" face="verdana,arial"><b>Enter your login and password</b></font></th></tr>
 <tr><td bgcolor="white" style="padding:5"><br>
-<form method="post" action="http://www.authpro.com/auth/deluxe/" name="aform">
+<form method="post" action="index1.php" name="aform">
 <input type="hidden" name="action" value="login">
 <input type="hidden" name="hide" value="">
 <center><table border='0'>
