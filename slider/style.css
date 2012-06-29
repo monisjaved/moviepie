@@ -25,10 +25,10 @@ a:focus { outline: none; }
 }
 
 .fix-size2 {
-		width:900px;
+		width:700px;
 		background:#ccc;
 		padding:10px;
-		height:500px;
+		height:400px;
 		border:1px solid #1f1f1f
 }
 
@@ -41,7 +41,7 @@ a:focus { outline: none; }
 }
 
 .scroll {
-		height:700px;
+		height:40px;
 		width: 100%;
 		overflow: auto;
 		overflow-x: hidden;
