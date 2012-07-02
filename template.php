@@ -90,8 +90,8 @@
 				<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=256499181042648&amp;xfbml=1"></script>
 				<fb:like href="http://www.facebook.com/site.engineerinme" send="true" width="270" show_faces="true" font=""></fb:like>
 				</p>
-				<h2></h2>
-				<p>humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+				<h2><a href="#" onclick="newInvite(); return false;">Send Request/Send Invitation</a></h2>
+				<p>Please invite your friends ! .. Help us grow </p>
 				<h2></h2>
 				<p>humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
 				<!-- Column 3 end -->
