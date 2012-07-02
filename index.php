@@ -16,6 +16,7 @@
                 'callback'  => ''
             );
             $fqlResult   =   $facebook->api($param);
+			echo "hello world "  ;
         }
         catch(Exception $o){
             d($o);
