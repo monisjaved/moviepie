@@ -14,7 +14,7 @@
 	<style type="text/css">
 			div.text{
 
-				height: 400px;
+				height: 300px;
 				width:auto;
 				border: 1px solid #bfbfbf;
 
