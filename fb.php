@@ -20,7 +20,7 @@
     	echo "hello " ;
     $user            =   null; 
     try{
-        include_once "sdk/src/facebook.php";
+        include_once "facebook.php" ;
     }
     catch(Exception $o){
         echo '<pre>';
