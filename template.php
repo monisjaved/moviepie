@@ -14,7 +14,7 @@
 	<style type="text/css">
 			div.text{
 
-				height:auto;
+				height:400 px;
 				width:auto;
 				border: 1px solid #bfbfbf;
 
@@ -125,6 +125,8 @@
 			</div>
 			<div class="col2">
 				<!-- Column 2 start -->
+				<h2>Edit  </h2>
+				<p>Edit college prfiles added by me or profile of my college (verifed users).</p>
 				<h2>Reviews </h2>
 				<p>
 				<div class="text">
@@ -141,8 +143,7 @@
 				<p>Some sample text </p>
 				</div>
 			    </p>
-				<h2>Edit  </h2>
-				<p>Edit college prfiles added by me or profile of my college (verifed users).</p>
+				
 				<!-- <h2></h2>
 				<p>humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
 				Column 2 end -->
