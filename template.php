@@ -115,8 +115,6 @@
 				<!-- Column 2 start -->
 				<h2>Reviews </h2>
 				<p>Recent reviews</p>
-				<h2>Add </h2>
-				<p>Add your college (only verified users ).</p>
 				<h2>Edit  </h2>
 				<p>Edit college prfiles added by me or profile of my college (verifed users).</p>
 				<!-- <h2></h2>
@@ -130,6 +128,8 @@
 								<input type="submit" name="search" value="Go" id="search_button"  />
                                 </form>
                                 <div id="livesearch"></div>
+				<h2>Add </h2>
+				<p>Add your college (only verified users ).</p>
 				<h2>Social Visiblity </h2>
 				<p>
 				<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=256499181042648&amp;xfbml=1"></script>
