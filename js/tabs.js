@@ -62,11 +62,7 @@ $("div#tab-3").hide();
 
 
 });
-     $(document).ready(function () {
-                $("#tabs").tabs();
-            });
-
-            function updateStatus(){
+     function updateStatus(){
                 var status  =   document.getElementById('status').value;
                 
                 $.ajax({
@@ -121,7 +117,7 @@ $("div#tab-3").hide();
                 }); */
             }
             function publishStream(){
-                streamPublish("Stream Publish", 'Awsome app  ', 'my app ', 'http://engineerinme.com', "Facebook Application");
+                streamPublish("Stream Publish", 'Thinkdiff.net is simply awesome. I just learned how to develop Iframe+Jquery+Ajax base facebook application development using php sdk 3.0. ', 'Checkout the Tutorial', 'http://wp.me/pr3EW-sv', "Demo Facebook Application Tutorial");
             }
             function increaseIframeSize(w,h){
                 var obj =   new Object;
@@ -133,13 +129,12 @@ $("div#tab-3").hide();
             function newInvite(){
                  var receiverUserIds = FB.ui({ 
                         method : 'apprequests',
-                        message: 'come on man checkout my application.',
+                        message: 'come on man checkout my application. visit http://thinkdiff.net',
                  },
                  function(receiverUserIds) {
                           console.log("IDS : " + receiverUserIds.request_ids);
                         }
                  );
-                 //http://developers.facebook.com/docs/reference/dialogs/requests/
             }
        
 		

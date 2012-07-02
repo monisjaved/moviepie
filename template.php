@@ -82,7 +82,8 @@
 			<div class="col3">
 				<!-- Column 3 start -->
 				<form action="#" method="post" id="search_form" class="clearfix" >
-                                <input type="text" size="40" maxlength="150" name="search_text" placeholder="Autosuggest " id="search_text" onkeyup="showResult(this.value)" />                                <input type="submit" name="search" value="Go" id="search_button"  />
+                                <input type="text" size="40" maxlength="150" name="search_text" placeholder="Autosuggest " id="search_text" onkeyup="showResult(this.value)" />
+								<input type="submit" name="search" value="Go" id="search_button"  />
                                 </form>
                                 <div id="livesearch"></div>
 				<h2>Social Visiblity </h2>
