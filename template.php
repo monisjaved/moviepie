@@ -15,6 +15,18 @@
 <body>
 
 <div id="header">
+<div id="fb-root"></div>
+    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+     <script type="text/javascript">
+       FB.init({
+         appId  : '<?=$fbconfig['appid']?>',
+         status : true, // check login status
+         cookie : true, // enable cookies to allow the server to access the session
+         xfbml  : true  // parse XFBML
+       });
+       
+     </script>
+	 
 	<p><h1>College profiler </h1><h3>An edge over others.</h3></p>
 	<p id="layoutdims">
 	<ul id="menu" class="menu blue left" style="border-bottom-right-radius: 50px 50px;border-top-left-radius: 50px 50px;border-bottom-left-radius: 50px 50px;border-top-right-radius: 50px 50px;" >
