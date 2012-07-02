@@ -10,7 +10,19 @@
 	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"> </script>
 	<script src="js/tabs.js" type="text/javascript"> </script>
-	<script src="js/search.js" type="text/javascript"> </script>
+	<script src="js/search.js" type="text/javascript"> </script><script src="js/ticker.js" type="text/javascript"> </script>
+	<style type="text/css">
+			div.text{
+
+				height:405px;
+				width:auto;
+				border: 1px solid #bfbfbf;
+
+			}
+			div.text p{
+				padding:2px;
+			}
+		</style>
 	<script type="text/javascript">
             function updateStatus(){
                 var status  =   document.getElementById('status').value;
@@ -114,7 +126,15 @@
 			<div class="col2">
 				<!-- Column 2 start -->
 				<h2>Reviews </h2>
-				<p>Recent reviews</p>
+				<p>
+				<div class="text">
+				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/1.jpg" alt="" /></p>
+				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/2.jpg" alt="" /></p>
+				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/3.jpg" alt="" /></p>
+				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/4.jpg" alt="" /></p>
+				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/5.jpg" alt="" /></p>
+				</div>
+			    </p>
 				<h2>Edit  </h2>
 				<p>Edit college prfiles added by me or profile of my college (verifed users).</p>
 				<!-- <h2></h2>
