@@ -136,9 +136,9 @@
 				</p>
 				<h2><a href="#" onclick="newInvite(); return false;"><font color "red" >Send Request/Send Invitation</font > </a></h2>
 				<p>Please invite your friends ! .. Help us grow </p>
-				<h2></h2>
+				<!-- <h2></h2>
 				<p>humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-				<!-- Column 3 end -->
+				Column 3 end -->
 			</div>
 		</div>
 	</div>
