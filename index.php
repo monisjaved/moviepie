@@ -20,6 +20,6 @@
         }
     }
     //set page to include default is home.php
-    $page   =   isset($_REQUEST['page']) ? $_REQUEST['page'] : "home.php";
+  //  $page   =   isset($_REQUEST['page']) ? $_REQUEST['page'] : "home.php";
     include_once "template.php";
 ?>
