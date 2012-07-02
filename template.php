@@ -129,10 +129,15 @@
 				<p>
 				<div class="text">
 				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/1.jpg" alt="" /></p>
+				<p>Some sample text </p>
 				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/2.jpg" alt="" /></p>
+				<p>Some sample text </p>
 				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/3.jpg" alt="" /></p>
+				<p>Some sample text </p>
 				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/4.jpg" alt="" /></p>
+				<p>Some sample text </p>
 				<p><img src="http://peeyushchandel.files.wordpress.com/2012/01/5.jpg" alt="" /></p>
+				<p>Some sample text </p>
 				</div>
 			    </p>
 				<h2>Edit  </h2>
