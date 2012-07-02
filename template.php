@@ -88,7 +88,7 @@
 
 </li>
 		<li><a href="#" id="tab4"> Your College  </a></li>
-		<li><a href="#" onclick="newInvite(); return false;">Send Invitation</li>
+		<li><a href="#" onclick="newInvite(); return false;">Send Invitation</a></li>
 	</ul>
 	</p>
 </div>
