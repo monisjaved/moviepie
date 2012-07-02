@@ -6,8 +6,8 @@ jQuery(document).ready(function($){
 	if($("div.text > p").length>0)
 	{
 	$("div.text > p").css("display","none");
-	$("div.text > p:first").fadeIn(2000).css("display","block").addClass("nowShowing");
-	timeID=setInterval('textRotate()',2000);
+	$("div.text > p:first").fadeIn(1000).css("display","block").addClass("nowShowing");
+	timeID=setInterval('textRotate()',1000);
 	}
 
 	$("div.text").mouseenter(function(){
@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 	});
 
 	$("div.text").mouseleave(function(){
-		timeID=setInterval('textRotate()',2000);
+		timeID=setInterval('textRotate()',1000);
 	});
 
 
@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 			if($("div.text > .nowShowing:last").next().length>0)
 			{
 
-			items.next().fadeIn(2000).css("display","block").addClass("nowShowing");	
+			items.next().fadeIn(1000).css("display","block").addClass("nowShowing");	
 			}
 			else
 			{
@@ -43,7 +43,7 @@ jQuery(document).ready(function($){
 				$(this).slideUp("2000").removeClass("nowShowing");
 			});
 
-			$("div.text > p:first").fadeIn(2000).css("display","block").addClass("nowShowing");	
+			$("div.text > p:first").fadeIn(1000).css("display","block").addClass("nowShowing");	
 			}
 
 
