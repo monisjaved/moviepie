@@ -1,5 +1,8 @@
 <?php
-    include_once "fb.php";
+    try {
+	include_once "fb.php";
+	} catch(Exception $o){
+            d($o);
     
     if ($user){
         
