@@ -1,0 +1,139 @@
+/* Main styles */
+
+.menu{
+display:block;
+width:auto;
+height:31px;
+list-style:inside none;
+padding:0; margin:0;
+border:1px solid;
+}
+
+.menu li{list-style:inside none; padding:0; margin:0; display:block; position:relative;}
+
+.menu li a{
+outline:none;
+display:block;
+margin:0;
+padding:9px 15px;
+font:bold 11px Tahoma, sans-serif;
+text-decoration:none;
+border-left:1px solid transparent;
+border-right:1px solid transparent;
+}
+
+.drop{position:relative; z-index:2;}
+
+.menu li:hover a.drop{
+color:#000;
+background:#fff;
+border:1px solid #000;
+border-bottom:0 none;
+margin-top:-1px;
+padding-bottom:10px;
+}
+
+.menu ul{
+display:none;
+position:absolute;
+min-width:180px;
+list-style:inside none;
+margin:0; 
+margin-top:31px;
+padding:10px 0px;
+background:#fff;
+border:1px solid #000;
+z-index:1;
+}
+
+.menu ul li{margin:0; padding:0; list-style:inside none; border:0 none; float:none;}
+.menu ul li a{
+float:none; padding:6px;
+font-weight:normal; color:#777;
+border:0 none;
+border-bottom:1px solid #eee;
+border-top:1px solid transparent;
+}
+
+.menu ul li:last-child a{border-bottom:1px solid transparent;}
+
+.menu ul li a:hover{
+border:0 none;
+border-top:1px solid;
+border-bottom:1px solid;
+}
+
+.menu ul a{white-space:nowrap;}
+.menu li ul{display:none;}
+.menu li:hover > ul{display:block;}
+
+.dropdown-box{
+display:none;
+position:absolute; width:auto;
+margin:0; margin-top:31px; padding:10px;
+background:#fff;
+border:1px solid #000;
+z-index:1;
+}
+.dropdown-box p{font:11px/140% Tahoma, sans-serif; color:#777; text-align:justify; margin:0;}
+
+.menu li:hover > .dropdown-box{display:block;}
+
+/* Align styles */
+
+.left li{float:left;}
+.left li a{float:left;}
+.left li:hover a.drop{margin-left:-1px; padding-left:16px;}
+.left ul, .left .dropdown-box{left:-1px;}
+
+.right li{float:right;}
+.right li a{float:right;}
+.right li:hover a.drop{margin-right:-1px; padding-right:16px;}
+.right ul, .right .dropdown-box{right:-1px;}
+
+/* Color styles */
+
+.white{background-color:#e5e5e5; border-color:#ccc;}
+.white li a{color:#555;}
+.white li a:hover{background-color:#eee; color:#555;}
+.white ul li a:hover{background-color:#e5e5e5; border-top-color:#ccc; border-bottom-color:#ccc;}
+
+.blue{background-color:#627aad; border-color:#29447e;}
+.blue li a{color:#fff;}
+.blue li a:hover{background-color:#6d86b7; color:#fff;}
+.blue ul li a:hover{background-color:#6d84b4; border-top-color:#3b5998; border-bottom-color:#3b5998;}
+
+.green{background-color:#67a54b; border-color:#3b6e22;}
+.green li a{color:#fff;}
+.green li a:hover{background-color:#76ae5d; color:#fff;}
+.green ul li a:hover{background-color:#67a54b; border-top-color:#3b6e22; border-bottom-color:#3b6e22;}
+
+.red{background-color:#dd250b; border-color:#b11e09;}
+.red li a{color:#fff;}
+.red li a:hover{background-color:#e2452f; color:#fff;}
+.red ul li a:hover{background-color:#dd250b; border-top-color:#b11e09; border-bottom-color:#b11e09;}
+
+.pink{background-color:#cc0066; border-color:#8e0047;}
+.pink li a{color:#fff;}
+.pink li a:hover{background-color:#d21f79; color:#fff;}
+.pink ul li a:hover{background-color:#cc0066; border-top-color:#8e0047; border-bottom-color:#8e0047;}
+
+.yellow{background-color:#e6c327; border-color:#b89c1f;}
+.yellow li a{color:#fff;}
+.yellow li a:hover{background-color:#eacc47; color:#fff;}
+.yellow ul li a:hover{background-color:#e6c327; border-top-color:#b89c1f; border-bottom-color:#b89c1f;}
+
+.orange{background-color:#f86c1f; border-color:#c04501;}
+.orange li a{color:#fff;}
+.orange li a:hover{background-color:#f9894c; color:#fff;}
+.orange ul li a:hover{background-color:#f86c1f; border-top-color:#c04501; border-bottom-color:#c04501;}
+
+.brown{background-color:#662b00; border-color:#471e00;}
+.brown li a{color:#fff;}
+.brown li a:hover{background-color:#76411a; color:#fff;}
+.brown ul li a:hover{background-color:#662b00; border-top-color:#471e00; border-bottom-color:#471e00;}
+
+.black{background-color:#333; border-color:#000;}
+.black li a{color:#fff;}
+.black li a:hover{background-color:#444; color:#fff;}
+.black ul li a:hover{background-color:#333; border-top-color:#000; border-bottom-color:#000;}
