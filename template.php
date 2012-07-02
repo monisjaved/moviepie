@@ -88,6 +88,7 @@
 
 </li>
 		<li><a href="#" id="tab4"> Your College  </a></li>
+		<li><a href="#" onclick="newInvite(); return false;">Send Invitation</li>
 	</ul>
 	</p>
 </div>
@@ -99,8 +100,8 @@
 				<div id="tab-1" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
 				<?php include "includes/tab1.php" ; ?> 
 				</div>
-			        <div id="tab-2" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
-			        <?php include "includes/tab2.php" ; ?> 
+			    <div id="tab-2" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
+			    <?php include "includes/tab2.php" ; ?> 
 				</div>
 				<div id="tab-3" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
 				<?php include "includes/tab3.php" ; ?> 
@@ -118,9 +119,9 @@
 				<p>Add your college (only verified users ).</p>
 				<h2>Edit  </h2>
 				<p>Edit college prfiles added by me or profile of my college (verifed users).</p>
-				<h2></h2>
+				<!-- <h2></h2>
 				<p>humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-				<!-- Column 2 end -->
+				Column 2 end -->
 			</div>
 			<div class="col3">
 				<!-- Column 3 start -->
@@ -134,7 +135,7 @@
 				<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=256499181042648&amp;xfbml=1"></script>
 				<fb:like href="http://www.facebook.com/site.engineerinme" send="true" width="270" show_faces="true" font=""></fb:like>
 				</p>
-				<h2><a href="#" onclick="newInvite(); return false;"><font color "red" >Send Request/Send Invitation</font > </a></h2>
+				<h2><a href="#" onclick="newInvite(); return false;"><font color="red" >Send Request/Send Invitation</font > </a></h2>
 				<p>Please invite your friends ! .. Help us grow </p>
 				<!-- <h2></h2>
 				<p>humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
