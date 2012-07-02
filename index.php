@@ -1,9 +1,9 @@
 <?php
     try {
-	include_once "fb.php";
+	include_once "fb.php" ;
 	} catch(Exception $o){
             d($o);
-    
+    /*
     if ($user){
         
         try{
@@ -22,6 +22,7 @@
             d($o);
         }
     }
+	*/
   
    // $page   =   isset($_REQUEST['page']) ? $_REQUEST['page'] : "home.php";
    // include_once "template.php";

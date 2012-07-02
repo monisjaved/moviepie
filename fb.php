@@ -11,12 +11,13 @@
         exit;
     }
     //~~
+	echo "hello " ;
     
     //
     if (isset($_GET['request_ids'])){
         
     }
-    
+    	echo "hello " ;
     $user            =   null; 
     try{
         include_once "sdk/src/facebook.php";
@@ -26,13 +27,14 @@
         print_r($o);
         echo '</pre>';
     }
+		echo "hello " ;
     
     $facebook = new Facebook(array(
       'appId'  => $fbconfig['appid'],
       'secret' => $fbconfig['secret'],
       'cookie' => true,
     ));
-
+	echo "hello " ;
   
     $user       = $facebook->getUser();
     
@@ -51,7 +53,7 @@
         $user = null;
       }
     }
-
+	echo "hello " ;
     if (!$user) {
         echo "<script type='text/javascript'>top.location.href = '$loginUrl';</script>";
         exit;
@@ -59,7 +61,7 @@
     
     //get user basic description
     $userInfo           = $facebook->api("/$user");
-
+	echo "hello " ;
     function d($d){
         echo '<pre>';
         print_r($d);
