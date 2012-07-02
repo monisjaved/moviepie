@@ -1,25 +1,19 @@
 <?php
-    //facebook application configuration -mahmud
-    $fbconfig['appid' ] = "";
-    $fbconfig['secret'] = "";
+   
+    $fbconfig['appid' ] = "437250146304463";
+    $fbconfig['secret'] = "c793f75f4e1cecbc28e7e377ce7d511e";
 
-    $fbconfig['baseUrl']    =   "";// "http://thinkdiff.net/demo/newfbconnect1/iframe/sdk3";
-    $fbconfig['appBaseUrl'] =   "";// "http://apps.facebook.com/thinkdiffdemo";
+    $fbconfig['baseUrl']    =   "https://freeforall.herokuapp.com/";
+    $fbconfig['appBaseUrl'] =   "http://apps.facebook.com/knowyourcollege/";
 
     
-    /* 
-     * If user first time authenticated the application facebook
-     * redirects user to baseUrl, so I checked if any code passed
-     * then redirect him to the application url 
-     * -mahmud
-     */
+    
     if (isset($_GET['code'])){
         header("Location: " . $fbconfig['appBaseUrl']);
         exit;
     }
-    //~~
-    
-    //
+   
+   
     if (isset($_GET['request_ids'])){
         //user comes from invitation
         //track them if you need
@@ -34,21 +28,16 @@
         print_r($o);
         echo '</pre>';
     }
-    // Create our Application instance.
+    
     $facebook = new Facebook(array(
       'appId'  => $fbconfig['appid'],
       'secret' => $fbconfig['secret'],
       'cookie' => true,
     ));
 
-    //Facebook Authentication part
+    
     $user       = $facebook->getUser();
-    // We may or may not have this data based 
-    // on whether the user is logged in.
-    // If we have a $user id here, it means we know 
-    // the user is logged into
-    // Facebook, but we don’t know if the access token is valid. An access
-    // token is invalid if the user logged out of Facebook.
+   
     
     $loginUrl   = $facebook->getLoginUrl(
             array(
@@ -58,11 +47,11 @@
 
     if ($user) {
       try {
-        // Proceed knowing you have a logged in user who's authenticated.
+       
         $user_profile = $facebook->api('/me');
       } catch (FacebookApiException $e) {
-        //you should use error_log($e); instead of printing the info on browser
-        d($e);  // d is a debug function defined at the end of this file
+       
+        d($e);  
         $user = null;
       }
     }
@@ -72,7 +61,7 @@
         exit;
     }
     
-    //get user basic description
+   
     $userInfo           = $facebook->api("/$user");
 
     function d($d){
