@@ -110,13 +110,13 @@
 			<div class="col1">
 				<!-- Column 1 start -->
 				<div id="tab-1" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
-				<?php include "includes/tab1.php" ; ?> 
+				<?php include "includes/tab3.php" ; ?> 
 				</div>
 			    <div id="tab-2" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
 			    <?php include "includes/tab2.php" ; ?> 
 				</div>
 				<div id="tab-3" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
-				<?php include "includes/tab3.php" ; ?> 
+				<?php include "includes/tab1.php" ; ?> 
 				</div>
 				<div id="tab-4" style="overflow:hidden; height:auto; display: block; border-width: 0; padding: 1em 1.4em; background: none;" >
 				<?php include "includes/tab4.php" ; ?> 
