@@ -35,9 +35,13 @@ if($user){
 			$json=getPage($url, $referer, $timeout, $header);
 			$data=json_decode($json);
 			d($data);
-			foreach($data as $suggest )
+			$ki=0;
+			foreach($data->movies as $suggest )
 				{
 					d("<a href='".$suggest->id."'>".$suggest->title."</a>");
+					$ki++;
+					if ($ki > 5 )
+						break ; 
 				}
 		}
 	}else
