@@ -29,18 +29,12 @@ if($user){
 		d($list);
 		for($j=0;$j<$i;$j++)
 		{	
-		$arra=explode (" ",$list[$j]);
-		d($arra);
-		$url="http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$arra[0]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
-		
-		//$url="http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=HarryPotter&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
-			echo $url ;
+			$arra=explode (" ",$list[$j]);
+		    $url="http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$arra[0]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
 			$referer=$url ; 
 			$json=getPage($url, $referer, $timeout, $header);
 			$data=json_decode($json);
-		//	$json = file_get_contents($url); $data = json_decode($json, TRUE);
 			d($data);
-									
 		}
 	}else
 	echo "you have not added any movies in your fb profiel " ; 
