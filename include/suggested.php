@@ -30,10 +30,8 @@ if($user){
 		for($j=0;$j<$i;$j++)
 		{	$url="api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$list[$j]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
 			echo $url ;
-			$referer=$url ; 
-			$u=getPage($url, $referer, $timeout, $header);
-			$j1=json_decode($u);
-			d($j1);
+			$json = file_get_contents($url); $data = json_decode($json, TRUE);
+			d($data);
 									
 		}
 	}
