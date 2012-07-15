@@ -30,11 +30,15 @@ if($user){
 		for($j=0;$j<$i;$j++)
 		{	$url="api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$list[$j]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
 			echo $url ;
-			$json = file_get_contents($url); $data = json_decode($json, TRUE);
-			d($json);
+			$referer=$url ; 
+			$json=getPage($url, $referer, $timeout, $header);
+			$data=json_decode($json);
+		//	$json = file_get_contents($url); $data = json_decode($json, TRUE);
+			d($data);
 									
 		}
-	}
+	}else
+	echo "you have not added any movies in your fb profiel " ; 
 	
 	
 
