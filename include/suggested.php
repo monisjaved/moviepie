@@ -21,7 +21,23 @@ if($user){
 	
 	
 	}
-	else echo "no user data";
+	else 
+	{
+		echo "no user data ! so we have got some thing for you ! have a look at trending movies ";
+		$url="api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?limit=15&country=us&apikey=uuacu746nquzs3f2679dcyv6";
+		$referer="http://apps.facebook.com/moviepie/" ; 
+		$u1=getPage($url, $referer, $timeout, $header);
+		$j1=json_decode($u1);
+		echo"<ul>";
+     foreach ( $j1->movies as $data1)
+		{
+				echo "<li>";
+				echo "<a href='movies.php?mid=".$data1->id."'>";
+				echo "<img src=".$data1->posters->thumbnail." width='75' >"; 
+				echo "</a></li>"; 
+		}
+		echo"</ul>";
+	}
 	$count=1; 
 	if($i > 0 ) 
 	{
