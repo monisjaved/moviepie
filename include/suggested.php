@@ -60,6 +60,7 @@ if($user){
 		}
 	}else
 		{
+		d("We were not able to find movies specific to your taste , but we have some trending movies up for you ! ");
 		$url="api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?limit=15&country=us&apikey=uuacu746nquzs3f2679dcyv6";
 		$referer="http://apps.facebook.com/moviepie/" ; 
 		$u1=getPage($url, $referer, $timeout, $header);
