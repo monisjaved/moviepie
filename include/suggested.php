@@ -34,7 +34,7 @@ if($user){
 			$referer=$url ; 
 			$json=getPage($url, $referer, $timeout, $header);
 			$data=json_decode($json);
-			d($data);
+			//d($data);
 			$ki=0;
 			foreach($data->movies as $suggest )
 				{
