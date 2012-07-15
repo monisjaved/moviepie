@@ -11,8 +11,8 @@ if($user){
 		$i=0 ; 
 		foreach ($userd[data] as $movies )
 		{
-		$list[$i]= $movies[name];
-		$i++ ; 
+			$list[$i]= $movies[name];
+			$i++ ; 
 		}
 		
 	} catch (FacebookApiException $e) {
@@ -25,7 +25,7 @@ if($user){
 	$count=1; 
 	if($i > 0 ) 
 	{
-		echo " some similar movies " ; 
+		echo " <center><strong>Some similar movies</strong></center> " ; 
 		//d($list);https://freeforall.herokuapp.com/movies.php?mid=770805429
 		for($j=0;$j<$i;$j++)
 		{	
