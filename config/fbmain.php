@@ -2,7 +2,7 @@
     $fbconfig['appid' ] = "355087481227235";
     $fbconfig['secret'] = "c345d53328af79c9d6876aee0b3a70a4";
 
-    $fbconfig['baseUrl']    =   "https://saint.nseasy.com/~engineer/apps/movies/";
+    $fbconfig['baseUrl']    =   "https://freeforall.herokuapp.com/";
     $fbconfig['appBaseUrl'] =   "http://apps.facebook.com/moviepie/";
 
    
