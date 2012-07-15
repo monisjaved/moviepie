@@ -37,8 +37,8 @@ if($user){
 			d($data);
 			foreach($data as $suggest )
 				{
-					d("k");
-					
+					d("<a href='".$suggest->id."'>".$suggest->title."</a>");
+				}
 		}
 	}else
 	echo "you have not added any movies in your fb profiel " ; 
