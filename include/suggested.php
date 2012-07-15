@@ -37,7 +37,7 @@ if($user){
 			d($data);
 			foreach($data as $suggest )
 				{
-					d("<a href='".$suggest->id."'>".$suggest->title."</a>");
+					d("k");
 					
 		}
 	}else
