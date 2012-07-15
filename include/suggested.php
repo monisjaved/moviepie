@@ -26,7 +26,7 @@ if($user){
 	if($i > 0 ) 
 	{
 		echo " some similar movies " ; 
-		d($list);
+		//d($list);https://freeforall.herokuapp.com/movies.php?mid=770805429
 		for($j=0;$j<$i;$j++)
 		{	
 			$arra=explode (" ",$list[$j]);
@@ -38,7 +38,7 @@ if($user){
 			$ki=0;
 			foreach($data->movies as $suggest )
 				{
-					d("<a href='".$suggest->id."'>".$suggest->title."</a>");
+					d("<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."</a>");
 					$ki++;
 					if ($ki > 5 )
 						break ; 
