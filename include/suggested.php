@@ -69,6 +69,7 @@ if($user){
 		{
 				echo "<li>";
 				echo "<a href='movies.php?mid=".$data1->id."'>";
+				d($data1->title);
 				echo "<img src=".$data1->posters->thumbnail." width='75' >"; 
 				echo "</a></li>"; 
 		}
