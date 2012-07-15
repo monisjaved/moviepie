@@ -122,7 +122,7 @@ $("#sample").autocomplete({
     },
 
 
-    select: function (event, ui) { window.location = "https://saint.nseasy.com/~engineer/apps/movies/movies.php?mid="+ui.item.id; 
+    select: function (event, ui) { window.location = "http://freeforall.herokuapp.com/movies.php?mid="+ui.item.id; 
     
     }
 
