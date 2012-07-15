@@ -22,7 +22,7 @@ if($user){
 	
 	}
 	else echo "no user data";
-	
+	echo $i ; 
 	if($i > 0 ) 
 	{
 		echo " some similar movies " ; 
@@ -32,8 +32,8 @@ if($user){
 			echo $url ;
 			$referer=$url ; 
 			$u=getPage($url, $referer, $timeout, $header);
-			$j=json_decode($u);
-			d($j);
+			$j1=json_decode($u);
+			d($j1);
 									
 		}
 	}
