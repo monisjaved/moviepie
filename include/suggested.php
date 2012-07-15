@@ -22,7 +22,7 @@ if($user){
 	
 	}
 	else echo "no user data";
-	$count=0; 
+	$count=1; 
 	if($i > 0 ) 
 	{
 		echo " some similar movies " ; 
