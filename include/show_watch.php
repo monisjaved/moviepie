@@ -58,17 +58,16 @@ $sql=$sql.$rot ;
 }
 $sql=$sql."0" ; 
 /*update watchlist */
-d($sql);
-/*
+
+
 
 
 
 $loop =$dbh->Query($sql);
 $count=0;
 echo "<table>"; 
-if($dbh->FetchRow($loop))
+while($table =$dbh->FetchRow($loop))
 {	
-    $table =$dbh->FetchRow($loop);
 	$j=$count+1;
 	echo "<tr><td>".$j.". ";
 	print_r('&nbsp;&nbsp;&nbsp;<a class="btn btn-danger" href="?d=1&pid=1&mid='.$table['rot_id'].'">Delete ( - ) </a> &nbsp;&nbsp;&nbsp;&nbsp; ');
@@ -92,5 +91,5 @@ $res=$dbh->Query($sql1);
 if($_GET['d'] == 1 )
 {
 
-}*/
+}
 ?>							
