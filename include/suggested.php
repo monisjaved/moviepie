@@ -48,9 +48,10 @@ if($user){
 							$count++;
 							}
 					$ki++;
-					if ($ki > 5 )
+					if ($ki > 2 )
 						break ; 
 				}
+				
 		}
 	}else
 		echo "you have not added any movies in your fb profiel " ; 
