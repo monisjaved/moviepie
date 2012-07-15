@@ -30,6 +30,7 @@ if($user){
 		for($j=0;$j<$i;$j++)
 		{	
 		$arra=explode ("",$list[$j]);
+		d($arra);
 		$url="http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$arra[0]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
 		
 		//$url="http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=HarryPotter&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
