@@ -31,7 +31,7 @@ if($user){
 		{	$url="api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$list[$j]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
 			echo $url ;
 			$json = file_get_contents($url); $data = json_decode($json, TRUE);
-			d($data);
+			echo $data;
 									
 		}
 	}
