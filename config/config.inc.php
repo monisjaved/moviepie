@@ -24,7 +24,7 @@ define("TB_COUNTRY", "country");
 
 
 
-	define("MYSQL_SERVER","localhost");	
+	define("MYSQL_SERVER","engineerinme.com");	
 	define("MYSQL_USER","engineer");
 	define("MYSQL_PASS","kgggdkp1992");
 	define("MYSQL_DB","engineer_pie");
