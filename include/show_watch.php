@@ -62,20 +62,21 @@ $sql=$sql."0" ;
 
 
 
-echo $sql ;
+
 $loop =$dbh->Query($sql);
 $count=0;
-d($loop);
 echo "<table>"; 
-$table=$dbh->FetchRow($loop);
-	d($table);
+if($dbh->FetchRow($loop))
+{	
+$table =$dbh->FetchRow($loop);
+	$j=$count+1;
 	echo "<tr><td>".$j.". ";
 	print_r('&nbsp;&nbsp;&nbsp;<a class="btn btn-danger" href="?d=1&pid=1&mid='.$table['rot_id'].'">Delete ( - ) </a> &nbsp;&nbsp;&nbsp;&nbsp; ');
 	print_r('<b>Name:</b><a href="http://saint.nseasy.com/~engineer/apps/movies/movies.php?mid='.$table['rot_id'].'">'.$table['name'].'</a></td><td>');
 	
 	echo "</td></tr>";
-	
-
+	$count++;
+}
 echo "</table>" ; 
 if($count ==0)
 {
