@@ -62,12 +62,12 @@ $sql=$sql."0" ;
 
 
 
-
+echo $sql ;
 $loop =$dbh->Query($sql);
 $count=0;
 echo "<table>"; 
-while($table =$dbh->FetchRow($loop))
-{	
+$table=$dbh->FetchRow($loop);
+	
 	$j=$count+1;
 	echo "<tr><td>".$j.". ";
 	print_r('&nbsp;&nbsp;&nbsp;<a class="btn btn-danger" href="?d=1&pid=1&mid='.$table['rot_id'].'">Delete ( - ) </a> &nbsp;&nbsp;&nbsp;&nbsp; ');
@@ -75,7 +75,7 @@ while($table =$dbh->FetchRow($loop))
 	
 	echo "</td></tr>";
 	$count++;
-}
+
 echo "</table>" ; 
 if($count ==0)
 {
