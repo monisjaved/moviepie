@@ -37,15 +37,20 @@ if($user){
 			//d($data);
 			$ki=0;
 			foreach($data->movies as $suggest )
-				{
-					d("<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."</a>");
+				{	
+					if($list[$j] == $suggest->title )
+					{
+					
+					}
+					else
+						d("<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."</a>");
 					$ki++;
 					if ($ki > 5 )
 						break ; 
 				}
 		}
 	}else
-	echo "you have not added any movies in your fb profiel " ; 
+		echo "you have not added any movies in your fb profiel " ; 
 	
 	
 
