@@ -22,7 +22,7 @@ if($user){
 	
 	}
 	else echo "no user data";
-	echo $i ; 
+
 	if($i > 0 ) 
 	{
 		echo " some similar movies " ; 
@@ -35,6 +35,10 @@ if($user){
 			$json=getPage($url, $referer, $timeout, $header);
 			$data=json_decode($json);
 			d($data);
+			foreach($data as $suggest )
+				{
+					d("<a href='".$suggest->id."'>".$suggest->title."</a>");
+					
 		}
 	}else
 	echo "you have not added any movies in your fb profiel " ; 
