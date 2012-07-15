@@ -44,7 +44,8 @@ if($user){
 					}
 					else
 							{
-							d($count.".<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."<img src='".$suggest->posters->profile."'></a>");
+							d($count.".<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."</a>");
+							echo "<img src=".$suggest->posters->thumbnail.">"; 
 							$count++;
 							}
 					$ki++;
