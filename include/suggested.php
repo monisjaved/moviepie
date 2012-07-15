@@ -28,7 +28,7 @@ if($user){
 		echo " some similar movies " ; 
 		d($list);
 		for($j=0;$j<$i;$j++)
-		{	$url="api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$list[$j]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
+		{	$url="http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=".$list[$j]."&page_limit=5&page=1&apikey=uuacu746nquzs3f2679dcyv6";
 			echo $url ;
 			$referer=$url ; 
 			$json=getPage($url, $referer, $timeout, $header);
