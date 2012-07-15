@@ -22,7 +22,7 @@ if($user){
 	
 	}
 	else echo "no user data";
-
+	$count=0; 
 	if($i > 0 ) 
 	{
 		echo " some similar movies " ; 
@@ -43,7 +43,10 @@ if($user){
 					
 					}
 					else
-						d("<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."</a>");
+							{
+							d($count.".<a href='movies.php?mid=".$suggest->id."'>".$suggest->title."</a>");
+							$count++;
+							}
 					$ki++;
 					if ($ki > 5 )
 						break ; 
