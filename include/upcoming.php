@@ -26,7 +26,11 @@
 		echo $url;
 		$referer="http://apps.facebook.com/moviepie/" ; 
 		$u=getPage($url, $referer, $timeout, $header);
-		$j=json_decode($u);
-		echo "<pre>";
-		print_r($j);
-		echo "</pre>";
+		$j1=json_decode($u);
+	//	echo "<pre>";
+	//	print_r($j);
+	//	echo "</pre>";
+		foreach ($j1->results as $movies )
+		{
+			d($movies->original_title);
+		}
