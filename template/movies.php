@@ -38,7 +38,7 @@ $j=json_decode($u);
 			<img src="<?php echo $j->posters->profile ; ?>" > 
 			<h4><?php echo $j->critics_consensus ; ?></h4>
 			<?php
-			d($j->alternate_ids->imdb);
+	
 			 if($_GET['w']==1)
  		   	{
    		 	  echo '<a class="btn btn-success" href="">Added to Watchlist</a><br/><br/>';
@@ -186,13 +186,13 @@ $j=json_decode($u);
 			                          }
 			         }
 			        if($add_db == 1 )
-				{	$sql="INSERT INTO `movie`(`rot_id`,`name`) VALUES (".$_GET['mid'].",".$j->title.")";
-					 $sql="INSERT INTO `movie`(`rot_id`,`name`,`tmdb_id`,`imdb_id`) VALUES ('".$_GET['mid']."','".$j->title."','".$tmdb_id."','".$j->alternate_ids->imdb."')" ;
-			        echo $sql;  $res=$dbh->Query($sql);
+					$sql="INSERT INTO `movie`(`rot_id`,`name`) VALUES (".$_GET['mid'].",".$j->title.")";
+					//echo $sql ;
+			         $res=$dbh->Query("INSERT INTO `movie`(`rot_id`,`name`,`tmdb_id`,`imdb_id`) VALUES ('".$_GET['mid']."','".$j->title."','".$tmdb_id."','".$j->alternate_ids->imdb."')");
 					 
 					 
 					 
-				}
+				
 				
 		$mid=$_GET['mid'];
 		include_once  "config/config.php";
