@@ -20,9 +20,9 @@
 			</div>
       </div>
 					
-					<?php 
+		<?php 
 		$tmdb_key ='4cff43a8a3eec60c17cb778d7d56214a'; 
-		$url="http://api.themoviedb.org/3/movie/11?api_key=".$tmdb_key ."";
+		$url="http://api.themoviedb.org/3/movie/upcoming?api_key=".$tmdb_key ."";
 		echo $url;
 		$referer="http://apps.facebook.com/moviepie/" ; 
 		$u=getPage($url, $referer, $timeout, $header);
