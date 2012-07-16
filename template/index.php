@@ -69,8 +69,7 @@
 					    <?php 
 						include "include/upcoming.php"; 
 						?>
-						</div>
-					</div>
+						
 				</div>
 			</div>
       </div><!-- end row 1 -->
