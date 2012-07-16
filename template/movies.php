@@ -192,6 +192,26 @@ $j=json_decode($u);
 				
 				
 				
-				?>
+		$mid=$_GET['mid'];
+		$user = $facebook->getUser();
+		$sql="SELECT * FROM `offline_access_users` WHERE `user_id`='".$user."' " ; 
+		$res=$dbh->Query($sql);
+		$row=$dbh->FetchRow($res);
+		$watchlist=$row['recent'];
+		if($row['recent']=="" ||$row['recent'] == 0 )
+			{
+		//	echo "watch list empty start watching<br/> " ;
+			 $recent = $_GET['mid'] ;
+			}
+			else
+			{
+			$recent=$recent.",".$_GET['mid'] ; 
+			$mylist = explode(",",$recent);
+			
+			
+			}
+		//	echo "<br/>Your recent : ".$recent."<br/>" ; 
+		$sql="UPDATE `offline_access_users` SET recent='".$recent."' WHERE user_id='".$user."' " ; 
+		$res=$dbh->Query($sql);
 				
 					
