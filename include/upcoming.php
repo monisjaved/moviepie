@@ -20,11 +20,17 @@
 			</div>
       </div>
 					
-					<?php 
+		<?php 
 		$tmdb_key ='4cff43a8a3eec60c17cb778d7d56214a'; 
 		$url="http://api.themoviedb.org/3/movie/upcoming?api_key=".$tmdb_key ."";
 		echo $url;
 		$referer="http://apps.facebook.com/moviepie/" ; 
 		$u=getPage($url, $referer, $timeout, $header);
-		$j=json_decode($u);
-		print_r($j);
+		$j1=json_decode($u);
+	//	echo "<pre>";
+	//	print_r($j);
+	//	echo "</pre>";
+		foreach ($j1->results as $movies )
+		{
+			d($movies->original_title);
+		}
