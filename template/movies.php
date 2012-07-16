@@ -87,7 +87,7 @@ $j=json_decode($u);
 					<div class="tab-content">
 						<div class="tab-pane active" id="tabs-basic">
 							<h3></h3>
-							       <h3>Synopsis :</h3> <?php echo $j->synopsis ; ?>
+							       <h3>Synopsis :</h3> <?php d($j); echo $j->synopsis ; ?>
 									<b><br/><br/><br/>
 									MPAA Ratings  :  <?php echo $j->mpaa_rating ; ?><br/>
 									Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
