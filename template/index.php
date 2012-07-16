@@ -63,24 +63,11 @@
         <div class="span4">
         <div class="box">
           <h4>Upcoming Movies</h4>
-              <div class="demo3">
+     
+		 <div class="demo3">
 					<div style="position: absolute; margin: 0px; top: 0px; ">
-			<?php 
-		$url="api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?limit=15&country=us&apikey=uuacu746nquzs3f2679dcyv6";
-		$referer="http://apps.facebook.com/moviepie/" ; 
-		$u=getPage($url, $referer, $timeout, $header);
-		$j=json_decode($u);
-		foreach ( $j->movies as $data)
-		{
-				echo "<div>";
-				echo "<a href='movies.php?mid=".$data->id."'>";
-				d($data->title) ; 
-				echo "<img src=".$data->posters->thumbnail.">"; 
-				echo "</a></div>"; 
-		}
-?>
-
-					</div>
+					    <?php "includes/upcoming.php"; ?>
+						</div>
 					</div>
 				</div>
 			</div>
