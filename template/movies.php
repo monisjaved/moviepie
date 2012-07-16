@@ -87,7 +87,7 @@ $j=json_decode($u);
 					<div class="tab-content">
 						<div class="tab-pane active" id="tabs-basic">
 							<h3></h3>
-							       <h3>Synopsis :</h3> <?php d($j); echo $j->synopsis ; ?>
+							       <h3>Synopsis :</h3> <?php echo $j->synopsis ; ?>
 									<b><br/><br/><br/>
 									MPAA Ratings  :  <?php echo $j->mpaa_rating ; ?><br/>
 									Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
@@ -188,31 +188,13 @@ $j=json_decode($u);
 				{	$sql="INSERT INTO `movie`(`rot_id`,`name`) VALUES (".$_GET['mid'].",".$j->title.")";
 					//echo $sql ;
 			         $res=$dbh->Query("INSERT INTO `movie`(`rot_id`,`name`,`tmdb_id`,`imdb_id`) VALUES ('".$_GET['mid']."','".$j->title."','".$tmdb_id."','".$j->alternate_ids->imdb."')");
+					 
+					 
+					 
 				}
 				
-        )
 				
 				
-		$mid=$_GET['mid'];
-		$user = $facebook->getUser();
-		$sql="SELECT * FROM `offline_access_users` WHERE `user_id`='".$user."' " ; 
-		$res=$dbh->Query($sql);
-		$row=$dbh->FetchRow($res);
-		$watchlist=$row['recent'];
-		if($row['recent']=="" ||$row['recent'] == 0 )
-			{
-		//	echo "watch list empty start watching<br/> " ;
-			 $recent = $_GET['mid'] ;
-			}
-			else
-			{
-			$recent=$recent.",".$_GET['mid'] ; 
-			$mylist = explode(",",$recent);
-			
-			
-			}
-		//	echo "<br/>Your recent : ".$recent."<br/>" ; 
-		$sql="UPDATE `offline_access_users` SET recent='".$recent."' WHERE user_id='".$user."' " ; 
-		$res=$dbh->Query($sql);
+				?>
 				
 					
