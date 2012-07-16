@@ -191,7 +191,7 @@ $j=json_decode($u);
 						 if($j->alternate_ids->imdb < 5 )
 							$j->alternate_ids->imdb =0 ;
 					
-						 $res=$dbh->Query(" UPDATE Persons SET imdb_id='".$j->alternate_ids->imdb."' rot_id ='".$_GET['mid']."'");
+						 $res=$dbh->Query(" UPDATE `movie` SET imdb_id='".$j->alternate_ids->imdb."' where rot_id ='".$_GET['mid']."'");
 					 }else{
 			        if($add_db == 1 )
 					{
