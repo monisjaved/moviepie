@@ -188,6 +188,8 @@ $j=json_decode($u);
 					 if( $imdb == $j->alternate_ids->imdb )
 					 {
 						 $add_db =0;
+						 if($j->alternate_ids->imdb < 5 )
+							$j->alternate_ids->imdb =0 ;
 						 $res=$dbh->Query("INSERT INTO `movie`(`imdb_id`) SET ('".$j->alternate_ids->imdb."') where rot_id =".$_GET['mid']."");
 					 }else{
 			        if($add_db == 1 )
