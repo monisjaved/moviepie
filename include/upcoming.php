@@ -21,6 +21,7 @@
       </div>
 					
 		<?php 
+		/*
 		$tmdb_key ='4cff43a8a3eec60c17cb778d7d56214a'; 
 		$url="http://api.themoviedb.org/3/movie/upcoming?api_key=".$tmdb_key ."";
 	//	echo $url;
@@ -33,4 +34,4 @@
 		foreach ($j1->results as $movies )
 		{
 			d($movies->original_title);
-		}
+		} */
