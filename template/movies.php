@@ -38,6 +38,7 @@ $j=json_decode($u);
 			<img src="<?php echo $j->posters->profile ; ?>" > 
 			<h4><?php echo $j->critics_consensus ; ?></h4>
 			<?php
+			d($j->alternate_ids->imdb);
 			 if($_GET['w']==1)
  		   	{
    		 	  echo '<a class="btn btn-success" href="">Added to Watchlist</a><br/><br/>';
@@ -193,7 +194,28 @@ $j=json_decode($u);
 					 
 				}
 				
-				
+		$mid=$_GET['mid'];
+		include_once  "config/config.php";
+		$user = $facebook->getUser();
+		$sql="SELECT * FROM `offline_access_users` WHERE `user_id`='".$user."' " ; 
+		$res=$dbh->Query($sql);
+		$row=$dbh->FetchRow($res);
+		$recent=$row['recent'];
+		if($row['recent']=="" ||$row['recent'] == 0 )
+			{
+		//	echo "watch list empty start watching<br/> " ;
+			 $recent = $_GET['mid'] ;
+			}
+			else
+			{
+			$recent=$recent.",".$_GET['mid'] ; 
+			$mylist = explode(",",$recent);
+			
+			
+			}
+		//	echo "<br/>Your recent : ".$recent."<br/>" ; 
+		$sql="UPDATE `offline_access_users` SET recent='".$recent."' WHERE user_id='".$user."' " ; 
+		$res=$dbh->Query($sql);
 				
 				?>
 				
