@@ -16,7 +16,9 @@
 		/*above part displays the content in slider below is the tmdb api key, i have got 
 		use this to do the call , its more or less similar 
 		*/
-		?></div></div>
+		?></div></div></div>
+			</div>
+      </div>
 					
 					<?php 
 		$tmdb_key ='4cff43a8a3eec60c17cb778d7d56214a'; 

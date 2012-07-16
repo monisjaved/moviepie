@@ -70,9 +70,7 @@
 						include "include/upcoming.php"; 
 						?>
 						
-				</div>
-			</div>
-      </div><!-- end row 1 -->
+				<!-- end row 1 -->
       <div class="row">
         
       </div><!-- end row 1 -->
