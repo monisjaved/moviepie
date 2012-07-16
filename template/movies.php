@@ -5,7 +5,7 @@
     
 $res=$dbh->Query("select * from movie where rot_id = '".$_GET['mid']."' ");
 $row=$dbh->FetchRow($res);
-
+$imdb=$row['imdb_id'];
 	if($row['rot_id'] == $_GET['mid'])
 		{ $add_db = 0 ;}
 		else 
@@ -185,12 +185,18 @@ $j=json_decode($u);
 			      
 			                          }
 			         }
+					 if( $imdb == $j->alternate_ids->imdb )
+					 {
+						 $add_db =0;
+						 $res=$dbh->Query("INSERT INTO `movie`(`imdb_id`) SET ('".$j->alternate_ids->imdb."') where rot_id =".$_GET['mid']."");
+					 }else{
 			        if($add_db == 1 )
-					$sql="INSERT INTO `movie`(`rot_id`,`name`) VALUES (".$_GET['mid'].",".$j->title.")";
+					{
+					//$sql="INSERT INTO `movie`(`rot_id`,`name`) VALUES (".$_GET['mid'].",".$j->title.")";
 					//echo $sql ;
 			         $res=$dbh->Query("INSERT INTO `movie`(`rot_id`,`name`,`tmdb_id`,`imdb_id`) VALUES ('".$_GET['mid']."','".$j->title."','".$tmdb_id."','".$j->alternate_ids->imdb."')");
-					 
-					 
+					 }
+					 }
 					 
 				
 				
