@@ -187,8 +187,8 @@ $j=json_decode($u);
 			         }
 			        if($add_db == 1 )
 				{	$sql="INSERT INTO `movie`(`rot_id`,`name`) VALUES (".$_GET['mid'].",".$j->title.")";
-					//echo $sql ;
-			         $res=$dbh->Query("INSERT INTO `movie`(`rot_id`,`name`,`tmdb_id`,`imdb_id`) VALUES ('".$_GET['mid']."','".$j->title."','".$tmdb_id."','".$j->alternate_ids->imdb."')");
+					 $sql="INSERT INTO `movie`(`rot_id`,`name`,`tmdb_id`,`imdb_id`) VALUES ('".$_GET['mid']."','".$j->title."','".$tmdb_id."','".$j->alternate_ids->imdb."')" ;
+			        echo $sql;  $res=$dbh->Query($sql);
 					 
 					 
 					 
