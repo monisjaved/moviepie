@@ -86,7 +86,7 @@ $("#sample").autocomplete({
     source: function (request, response) {
       id=$.ajax("http://api.themoviedb.org/3/movie/550", {
             data: {
-                apikey: apikey,
+                api_key: apikey,
                 query: request.term
             },
             dataType: "jsonp",
