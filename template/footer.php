@@ -77,19 +77,19 @@ jQuery(document).ready(function() {
 
 
 
-var apikey = "4cff43a8a3eec60c17cb778d7d56214a";
+var apikey = "5xq9w7z2mp7a6cnchkfy52yd";
 var id=1;
 $("#sample").autocomplete({
 
 
 
     source: function (request, response) {
-      id=$.ajax("http://api.themoviedb.org/3/search/movie", {
+      id=$.ajax("http://api.rottentomatoes.com/api/public/v1.0/movies.json", {
             data: {
-                api_key: apikey,
-                query: request.term
+                apikey: apikey,
+                q: request.term
             },
-            dataType: "text",
+            dataType: "jsonp",
             success: function (data) {
                 console.log(data);
                 response($.map(data.movies, function (movie) {
