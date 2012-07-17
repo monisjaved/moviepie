@@ -84,12 +84,12 @@ $("#sample").autocomplete({
 
 
     source: function (request, response) {
-      id=$.ajax("http://api.themoviedb.org/3/movie/550", {
+      id=$.ajax("http://api.themoviedb.org/3/search/movie", {
             data: {
                 api_key: apikey,
                 query: request.term
             },
-            dataType: "jsonp",
+            dataType: "text",
             success: function (data) {
                 console.log(data);
                 response($.map(data.movies, function (movie) {
