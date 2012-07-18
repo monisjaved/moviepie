@@ -57,8 +57,8 @@ else
 	$res=$dbh->Query("SELECT * FROM offline_access_users where user_id = '".$user."' ");
 	$row=$dbh->FetchRow($res);
 	//d($row['access_token']);
-		//if(!isset($_SESSION['published']))
-		//		{
+		if(!isset($_SESSION['published']))
+				{
 					$msg=array();
 					$msg['access_token']=$row['access_token'];
 	                $msg['url']="http://apps.facebook.com/moviepie/";
@@ -74,6 +74,6 @@ else
 		             					continue ;
 		            				}
 		     
-		//		}
+			}
 				
 ?>
