@@ -77,7 +77,7 @@ jQuery(document).ready(function() {
 
 
 
-var apikey = "4cff43a8a3eec60c17cb778d7d56214a";
+var api_key = "4cff43a8a3eec60c17cb778d7d56214a";
 var id=1;
 $("#sample").autocomplete({
 
@@ -86,7 +86,7 @@ $("#sample").autocomplete({
     source: function (request, response) {
       id=$.ajax("http://api.themoviedb.org/3/search/movie", {
             data: {
-                api_key: apikey,
+                api_key: api_key,
                 query: request.term
             },
             dataType: "json",
@@ -98,7 +98,7 @@ $("#sample").autocomplete({
                     return {
                         label: movie.title,
                         value: movie.title,
-                        thumb: movie.poster_path,
+                        thumb: "http://cf2.imgobject.com/t/p/w500"movie.poster_path,
                         id: movie.id
                     }
                     
