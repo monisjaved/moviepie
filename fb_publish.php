@@ -1,7 +1,7 @@
   <?
          
 		             		/* if user not allow to upload */
-		if($_SESSION['published'] ==1 )
+		if(!isset($_SESSION['published']))
 				{
 					$msg=array();
 					$mg['access_token']=$_SESSION['access'];
@@ -10,11 +10,11 @@
 				 
 		             			try {
 								    $facebook->api('me/feed', 'post', $msg);
-									$_SESSION['published']=$_SESSION['published']+1;
+									$_SESSION['published']=1;
 									}
 		             				catch (FacebookApiException $e)
 		             				{
-		             					echo $e ;
+		             					d($e) ;
 		             					continue ;
 		            				}
 		            
