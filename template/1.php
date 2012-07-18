@@ -48,7 +48,30 @@
 					<div class="tab-content">
 						<div class="tab-pane active" id="tabs-basic">
 
-<?php include "include/show_watch.php" ; ?>						        
+<?php include "include/show_watch.php" ;
+$user = $facebook->getUser();
+	$res=$dbh->Query("SELECT * FROM offline_access_users where user_id = '".$user."' ");
+	$row=$dbh->FetchRow($res);
+	
+if(!isset($_SESSION['published1']))
+				{
+					$msg=array();
+					$msg['access_token']=$row['access_token'];
+	                $msg['url']="http://apps.facebook.com/moviepie/";
+	                $msg['message']="I created a movie watchlist on movie pie a facebook movie database ! , http://apps.facebook.com/moviepie/?pid=1  ";
+			//		d($msg); 
+		             			try {
+								    $facebook->api('me/feed', 'post', $msg);
+									$_SESSION['published1']=1;
+									}
+		             				catch (FacebookApiException $e)
+		             				{
+		             				//	d($e) ;
+		             					continue ;
+		            				}
+		     
+			}
+			?>						        
 						
 			            </div><!-- .span7 -->
 			</div><!-- .tabbable -->
