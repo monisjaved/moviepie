@@ -89,7 +89,7 @@ $("#sample").autocomplete({
                 api_key: apikey,
                 query: request.term
             },
-            dataType: "string",
+            dataType: "json",
             success: function (data) {
                 console.log(data);
                 response($.map(data.movies, function (movie) {
