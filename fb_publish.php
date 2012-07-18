@@ -1,10 +1,10 @@
   <?php 
   
-	echo "hello"; 
+	//echo "hello"; 
          
 		             		/* if user not allow to upload */
-		/*if(!isset($_SESSION['published']))
-				{*/
+		if(!isset($_SESSION['published']))
+				{
 					$msg=array();
 					$msg['access_token']=$_SESSION['access'];
 	                $msg['url']="http://apps.facebook.com/moviepie/";
@@ -19,7 +19,7 @@
 		             					d($e) ;
 		             					continue ;
 		            				}
-		/*            
+		     
 				}
-				*/
+				
 						?>
