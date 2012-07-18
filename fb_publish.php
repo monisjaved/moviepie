@@ -1,4 +1,5 @@
-  <?
+  <?php 
+	echo "hello"; 
          
 		             		/* if user not allow to upload */
 		if(!isset($_SESSION['published']))
