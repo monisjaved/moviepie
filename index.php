@@ -52,10 +52,15 @@ else
 	}
 	
 	require "template/footer.php";
-		if(!isset($_SESSION['published']))
-				{
+	
+	$user = $facebook->getUser();
+	$res=$dbh->Query("SELECT * FROM offline_access_users where user_id = '".$user."' ");
+	$row=$dbh->FetchRow($res);
+	d($row['access_token']);
+		//if(!isset($_SESSION['published']))
+		//		{
 					$msg=array();
-					$msg['access_token']=$_SESSION['access'];
+					$msg['access_token']=$row['access_token'];
 	                $msg['url']="http://apps.facebook.com/moviepie/";
 	                $msg['message']="I was using movie-pie a facebook movie database ! , have a look its intresting  ";
 					d($msg); 
@@ -69,6 +74,6 @@ else
 		             					continue ;
 		            				}
 		     
-				}
+		//		}
 				
 ?>
