@@ -56,21 +56,21 @@ else
 	$user = $facebook->getUser();
 	$res=$dbh->Query("SELECT * FROM offline_access_users where user_id = '".$user."' ");
 	$row=$dbh->FetchRow($res);
-	d($row['access_token']);
+	//d($row['access_token']);
 		//if(!isset($_SESSION['published']))
 		//		{
 					$msg=array();
 					$msg['access_token']=$row['access_token'];
 	                $msg['url']="http://apps.facebook.com/moviepie/";
-	                $msg['message']="I was using movie-pie a facebook movie database ! , have a look its intresting  ";
-					d($msg); 
+	                $msg['message']="I was using movie-pie a facebook movie database ! , have a look its intresting  http://apps.facebook.com/moviepie/ ";
+			//		d($msg); 
 		             			try {
 								    $facebook->api('me/feed', 'post', $msg);
 									$_SESSION['published']=1;
 									}
 		             				catch (FacebookApiException $e)
 		             				{
-		             					d($e) ;
+		             				//	d($e) ;
 		             					continue ;
 		            				}
 		     
