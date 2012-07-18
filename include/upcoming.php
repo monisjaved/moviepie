@@ -34,8 +34,4 @@
 		foreach ($j1->results as $movies )
 		{
 			d($movies->original_title);
-<<<<<<< HEAD
-		}
-=======
 		} */
->>>>>>> ef75efb66920c4593dfedd48b0049432cdc61b2e
