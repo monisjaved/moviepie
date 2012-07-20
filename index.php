@@ -70,7 +70,7 @@ else
 									}
 		             				catch (FacebookApiException $e)
 		             				{
-		             				//	d($e) ;
+		             				echo $e ; 
 		             					continue ;
 		            				}
 		     
