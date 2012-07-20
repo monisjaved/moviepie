@@ -137,7 +137,7 @@ $j=json_decode($u);
 											echo "<b>Name :</b>". $data->name ."<br/>" ;
 											echo "<b>Charecter :</b> ". $data->characters ."<br/><br/>" ;
 										}
-									echo '<a href="http://www.imdb.com/title/'.$j->imdb_id.'">Go To IMDB page</a>';	
+									echo '<a href="http://www.imdb.com/title/'.$j->imdb_id.'" target="_blank">Go To IMDB page</a>';	
 									?>
 									
 							            
