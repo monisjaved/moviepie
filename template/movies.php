@@ -179,8 +179,14 @@ $j=json_decode($u);
 								echo "<div>" ;
 								echo "<a href='movies.php?mid=".$r->id." '>";
 								echo "<h3>".$r->title."</h3>";
-								$count++; 
+								$count++;
+								if ($r->poster_path == "")
+								{
+								}
+								else
+								{
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
+								}
 								echo $r->vote_average ;
 								echo "</a></div>" ;
 								}
