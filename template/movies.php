@@ -161,7 +161,8 @@ $j=json_decode($u);
 								echo "<h3>".$r->title."</h3>";
 								$count++; 
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
-								echo $r->vote_average ;
+								
+								echo '/t'.$r->vote_average ;
 								echo "</a></div>" ;
 								}
 								if( $count == 0)
