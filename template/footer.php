@@ -96,9 +96,9 @@ $("#sample").autocomplete({
                 
                
                     return {
-                        label: movie.title,
-                        value: movie.title,
-                        thumb: movie.poster_path,
+                        label: movie.results.title,
+                        value: movie.results.title,
+                        thumb: movie.results.poster_path,
                         id: movie.id
                     }
                     
