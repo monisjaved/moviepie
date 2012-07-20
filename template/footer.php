@@ -92,13 +92,13 @@ $("#sample").autocomplete({
             dataType: "json",
             success: function (data) {
                 console.log(data);
-                response($.map(data.movies, function (movie) {
+                response($.map(data, function (movie) {
                 
                
                     return {
                         label: movie.title,
                         value: movie.title,
-                        thumb: "http://cf2.imgobject.com/t/p/w500"movie.poster_path,
+                        thumb: movie.poster_path',
                         id: movie.id
                     }
                     
@@ -132,7 +132,7 @@ $("#sample").autocomplete({
 
 
 }).data("autocomplete")._renderItem = function (ul, item) {
-    var img = $("<img>").attr("src", item.thumb);
+    var img = $("<img>").attr("src", "http://cf2.imgobject.com/t/p/w500/".item.thumb);
     var link = $("<a>").text(item.label).prepend(img);
     return $("<li>").data("item.autocomplete", item).append(link).appendTo(ul);
 };
