@@ -96,9 +96,15 @@ $j=json_decode($u);
 									Average Audience Rating : <?php echo $j->vote_average;?> <br/>
 									Audience Score  : <?php echo $j->vote_count;?> <br/>
 									Runtime			: <?php echo $j->runtime;?>&nsbp minutes <br/>
-									</b>
-									<br/>
 									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
+									<h3>Production Companies :  <?php echo $j->abridged_directors ; ?></h3><br/>
+									<h4>
+									<ul type="solid">
+									<?php
+									foreach($json_o->production_companies as $pc)
+									{
+									echo '<li>Name: '.$pc->name.'</li>';
+									}
 									<h3>Studio :  <?php echo $j->production_companies->name ; ?></h3><br/>
 									
 									<h3>Cast :</h3><br/>
