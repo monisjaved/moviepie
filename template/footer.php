@@ -77,28 +77,28 @@ jQuery(document).ready(function() {
 
 
 
-var api_key = "4cff43a8a3eec60c17cb778d7d56214a";
+var apikey = "5xq9w7z2mp7a6cnchkfy52yd";
 var id=1;
 $("#sample").autocomplete({
 
 
 
     source: function (request, response) {
-      id=$.ajax("http://api.themoviedb.org/3/search/movie", {
+      id=$.ajax("http://api.rottentomatoes.com/api/public/v1.0/movies.json", {
             data: {
-                api_key: api_key,
-                query: request.term
+                apikey: apikey,
+                q: request.term
             },
-            dataType: "json",
+            dataType: "jsonp",
             success: function (data) {
                 console.log(data);
-                response($.map(data, function (movie) {
+                response($.map(data.movies, function (movie) {
                 
                
                     return {
                         label: movie.title,
                         value: movie.title,
-                        thumb: movie.poster_path',
+                        thumb: movie.posters.thumbnail,
                         id: movie.id
                     }
                     
@@ -132,7 +132,7 @@ $("#sample").autocomplete({
 
 
 }).data("autocomplete")._renderItem = function (ul, item) {
-    var img = $("<img>").attr("src", "http://cf2.imgobject.com/t/p/w500/"+item.thumb);
+    var img = $("<img>").attr("src", item.thumb);
     var link = $("<a>").text(item.label).prepend(img);
     return $("<li>").data("item.autocomplete", item).append(link).appendTo(ul);
 };
