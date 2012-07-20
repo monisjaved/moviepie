@@ -139,15 +139,15 @@ $j=json_decode($u);
 								echo "<h3>".$c->name."</h3>&nbsp&nbsp";
 								echo "<h3>(".$c->character_name.")</h3><br/>";
 								$count++;
-								if ($r->poster_path == "")
+								if ($r->profile_path == "")
 								{
-								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
+								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->profile_path.'">';
 								}
 								else
 								{
 								echo "no image found";
 								}
-								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
+								//echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
 								echo $c->order ;
 								echo "</a></div>" ;
 								}
