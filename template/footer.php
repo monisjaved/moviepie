@@ -92,13 +92,13 @@ $("#sample").autocomplete({
             dataType: "json",
             success: function (data) {
                 console.log(data);
-                response($.map(data, function (movie) {
+                response($.map(data.results, function (movie) {
                 
                
                     return {
-                        label: movie.results.title,
-                        value: movie.results.title,
-                        thumb: movie.results.poster_path,
+                        label: movie.title,
+                        value: movie.title,
+                        thumb: movie.poster_path,
                         id: movie.id
                     }
                     
