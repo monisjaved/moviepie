@@ -101,7 +101,7 @@ $j=json_decode($u);
 									<h4>
 									<ul type="solid">
 									<?php
-									$c1=0
+									$c1=0;
 									foreach($j->production_companies as $pc)
 									{
 									echo '<li>Name		: '.$pc->name ;
@@ -148,7 +148,7 @@ $j=json_decode($u);
 						</div>
 						<div class="tab-pane" id="tabs-stacked">
 							<h3>Similar Movies</h3>
-							<?php /*
+							<?php 
 			$url="http://api.themoviedb.org/3/movie/".$_GET['mid']."/similar_movies?api_key=4cff43a8a3eec60c17cb778d7d56214a";
 								$referer=$url ; 
 								$u=getPage($url, $referer, $timeout, $header);
@@ -166,7 +166,7 @@ $j=json_decode($u);
 								}
 								if( $count == 0)
 								echo "No similar movies found "  ;
-								*/?>							
+								?>							
 						</div>
 						<div class="tab-pane" id="pills-basic">
 							<h3>Back drops</h3>
