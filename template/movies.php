@@ -98,7 +98,7 @@ $j=json_decode($u);
 									</b>
 									<br/>
 									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
-									<h3>Studio :  <?php echo $j.production_companie->sname ; ?></h3><br/>
+									<h3>Studio :  <?php echo $j->production_companies->sname ; ?></h3><br/>
 									
 									<h3>Cast :</h3><br/>
 									<?php foreach (  $j->abridged_cast as $data )
