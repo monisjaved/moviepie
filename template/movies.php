@@ -3,7 +3,7 @@
   //or even 'yaml'
    $tmdb_yaml = new TMDb('4cff43a8a3eec60c17cb778d7d56214a',TMDb::YAML);
     
-$res=$dbh->Query("select * from movie where rot_id = '".$_GET['mid']."' ");
+$res=$dbh->Query("select * from movie where tmdb_id = '".$_GET['mid']."' ");
 $row=$dbh->FetchRow($res);
 $imdb=$row['imdb_id'];
 	if($row['tmdb_id'] == $_GET['mid'])
@@ -98,7 +98,7 @@ $j=json_decode($u);
 									</b>
 									<br/>
 									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
-									<h3>Studio :  <?php echo $j->production_companies->name ; ?></h3><br/>
+									<h3>Studio :  <?php echo $j.production_companie->sname ; ?></h3><br/>
 									
 									<h3>Cast :</h3><br/>
 									<?php foreach (  $j->abridged_cast as $data )
