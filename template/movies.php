@@ -139,7 +139,7 @@ $j=json_decode($u);
 								echo "<h3>".$c->name."</h3>&nbsp&nbsp";
 								echo "<h3>(".$c->character_name.")</h3><br/>";
 								$count++;
-								if (isset($r->poster_path))
+								if ($r->poster_path == "")
 								{
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
 								}
