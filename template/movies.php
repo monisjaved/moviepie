@@ -107,7 +107,7 @@ $j=json_decode($u);
 									echo '<li>Name		: '.$pc->name;
 									$ctr++;
 									}
-									if( $ctr==0 )
+									if( $ctr == 0 )
 									{
 									echo 'No Production Companies listed for this movie';
 									}
