@@ -95,6 +95,7 @@ $j=json_decode($u);
 									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>-->
 									Average Audience Rating : <?php echo $j->vote_average;?> <br/>
 									Audience Score  : <?php echo $j->vote_count;?> <br/>
+									Runtime			: <?php echo $j->runtime;?>&nsbp minutes <br/>
 									</b>
 									<br/>
 									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
