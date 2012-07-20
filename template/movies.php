@@ -104,11 +104,13 @@ $j=json_decode($u);
 									$ctr=0
 									foreach($j->production_companies as $pc)
 									{
-									echo '<li>Name		: '.$pc->name.;
+									echo '<li>Name		: '.$pc->name;
 									$ctr++;
 									}
 									if( $ctr==0 )
+									{
 									echo 'No Production Companies listed for this movie';
+									}
 									?>
 									
 									</ul>
@@ -158,7 +160,7 @@ $j=json_decode($u);
 								echo "<a href='movies.php?mid=".$similar->id." '>";
 								echo "<h3>".$similar->title."</h3>";
 								$count++; 
-								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$similar->poster_path.'>';
+								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$similar->poster_path.'">';
 								echo $similar->vote_average ;
 								echo "</a></div>" ;
 								}
