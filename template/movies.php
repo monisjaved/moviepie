@@ -6,7 +6,7 @@
 $res=$dbh->Query("select * from movie where rot_id = '".$_GET['mid']."' ");
 $row=$dbh->FetchRow($res);
 $imdb=$row['imdb_id'];
-	if($row['rot_id'] == $_GET['mid'])
+	if($row['tmdb_id'] == $_GET['mid'])
 		{ $add_db = 0 ;}
 		else 
 		$add_db =1 ;
@@ -30,13 +30,12 @@ $j=json_decode($u);
 			     $name= $j->title;
 			     $date=$j->release_date;
 			     $rating_1=$j->mpaa_rating;
-				 echo $date;
 			      ?>
 			    </h2>
 			   
 			  
 			    <h3><?php echo $j->year ; ?></h3>
-			<img src="<?php echo $j->posters->profile ; ?>" > 
+			<img src="http://cf2.imgobject.com/t/p/w500<?php echo $j->posters->profile ; ?>" > 
 			<h4><?php echo $j->critics_consensus ; ?></h4>
 			<?php
 	
@@ -91,11 +90,11 @@ $j=json_decode($u);
 							<h3></h3>
 							       <h3>Synopsis :</h3> <?php echo $j->synopsis ; ?>
 									<b><br/><br/><br/>
-									MPAA Ratings  :  <?php echo $j->mpaa_rating ; ?><br/>
+									Rating  :  <?php echo $j->popularity ; ?><br/>
 									Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
 									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>
-									Audience Ratings : <?php echo $j->ratings->audience_rating;?> <br/>
-									Audience Score  : <?php echo $j->ratings->audience_score;?> <br/>
+									Average Audience Rating : <?php echo $j->vote_average;?> <br/>
+									Audience Score  : <?php echo $j->vote_count;?> <br/>
 									</b>
 									<br/>
 									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
