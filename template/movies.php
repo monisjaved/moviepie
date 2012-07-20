@@ -105,6 +105,7 @@ $j=json_decode($u);
 									{
 									echo '<li>Name: '.$pc->name.'</li>';
 									}
+									?>
 									<h3>Studio :  <?php echo $j->production_companies->name ; ?></h3><br/>
 									
 									<h3>Cast :</h3><br/>
