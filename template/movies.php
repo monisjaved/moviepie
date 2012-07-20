@@ -101,13 +101,17 @@ $j=json_decode($u);
 									<h4>
 									<ul type="solid">
 									<?php
+									$ctr=0
 									foreach($j->production_companies as $pc)
 									{
-									echo '<li>Name		: '.$pc->name.'</li>';
+									echo '<li>Name		: '.$pc->name.;
+									$ctr++;
 									}
+									if( $ctr==0 )
+									echo 'No Production Companies listed for this movie';
 									?>
+									
 									</ul>
-									<h3>Studio :  <?php echo $j->production_companies->name ; ?></h3><br/>
 									
 									<h3>Cast :</h3><br/>
 									<?php foreach (  $j->abridged_cast as $data )
@@ -143,19 +147,19 @@ $j=json_decode($u);
 						<div class="tab-pane" id="tabs-stacked">
 							<h3>Similar Movies</h3>
 							<?php
-			$url="http://api.rottentomatoes.com/api/public/v1.0/movies/".$_GET['mid']."/similar.json?limit=5&apikey=uuacu746nquzs3f2679dcyv6";
+			$url="http://api.themoviedb.org/3/movie/".$_GET['mid']."/similar_movies?api_key=4cff43a8a3eec60c17cb778d7d56214a";
 								$referer=$url ; 
 								$u=getPage($url, $referer, $timeout, $header);
 								$j1=json_decode($u);
 								$count=0; 
-								foreach ($j1->movies as $similar)
+								foreach ($j1->results as $similar)
 								{
 								echo "<div>" ;
 								echo "<a href='movies.php?mid=".$similar->id." '>";
 								echo "<h3>".$similar->title."</h3>";
 								$count++; 
-								echo "<img src=".$similar->posters->profile.">";
-								echo $similar->critics_consensus ;
+								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$similar->poster_path.'>';
+								echo $similar->vote_average ;
 								echo "</a></div>" ;
 								}
 								if( $count == 0)
