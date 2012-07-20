@@ -35,7 +35,7 @@ $j=json_decode($u);
 			   
 			  
 			    <h3><?php echo $j->year ; ?></h3>
-			<img src="http://cf2.imgobject.com/t/p/w500<?php echo $j->posters->profile ; ?>" > 
+			<img src="http://cf2.imgobject.com/t/p/w500<?php echo $j->poster_path ; ?>" > 
 			<h4><?php echo $j->critics_consensus ; ?></h4>
 			<?php
 	
@@ -90,9 +90,9 @@ $j=json_decode($u);
 							<h3></h3>
 							       <h3>Synopsis :</h3> <?php echo $j->synopsis ; ?>
 									<b><br/><br/><br/>
-									Rating  :  <?php echo $j->popularity ; ?><br/>
-									Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
-									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>
+									Popularity  :  <?php echo $j->popularity ; ?><br/>
+									<!--Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
+									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>-->
 									Average Audience Rating : <?php echo $j->vote_average;?> <br/>
 									Audience Score  : <?php echo $j->vote_count;?> <br/>
 									</b>
