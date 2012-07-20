@@ -140,7 +140,7 @@ $j=json_decode($u);
 								echo "<h3>(".$c->character_name.")</h3><br/>";
 								$count++; 
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
-								echo /t.$c->order ;
+								echo $c->order ;
 								echo "</a></div>" ;
 								}
 								if( $count == 0)
@@ -181,7 +181,7 @@ $j=json_decode($u);
 								echo "<h3>".$r->title."</h3>";
 								$count++; 
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
-								echo /t.$r->vote_average ;
+								echo $r->vote_average ;
 								echo "</a></div>" ;
 								}
 								if( $count == 0)
