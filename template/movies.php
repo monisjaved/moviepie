@@ -96,8 +96,24 @@ $j=json_decode($u);
 									Average Audience Rating : <?php echo $j->vote_average;?> <br/>
 									Audience Score  : <?php echo $j->vote_count;?> <br/>
 									Runtime			: <?php echo $j->runtime;?>&nbsp minutes <br/>
-									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
-									<h3>Production Companies :  <?php echo $j->abridged_directors ; ?></h3><br/>
+									<h3>Genres		:</h3><br/>
+									<h4>
+									<ul type="solid">
+									<?php
+									$c1=0;
+									foreach($j->genres as $g)
+									{
+									echo '<li>Name		: '.$g->name ;
+									$c1++;
+									}
+									if( $c1 == 0 )
+									{
+									echo "No genres listed for the movie" ;
+									}
+									?>
+									
+									</ul>
+									<h3>Production Companies		:</h3><br/>
 									<h4>
 									<ul type="solid">
 									<?php
