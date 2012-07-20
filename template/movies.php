@@ -12,7 +12,7 @@ $imdb=$row['imdb_id'];
 		$add_db =1 ;
 
 
-$url="http://api.rottentomatoes.com/api/public/v1.0/movies/".$_GET['mid'].".json?apikey=uuacu746nquzs3f2679dcyv6";
+$url="http://api.themoviedb.org/3/movie/".$_GET['mid']."?api_key=4cff43a8a3eec60c17cb778d7d56214a";
 $referer=$url ; 
 $u=getPage($url, $referer, $timeout, $header);
 $j=json_decode($u);
