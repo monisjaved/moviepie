@@ -141,7 +141,7 @@ $j=json_decode($u);
 								$count++;
 								if ($r->profile_path == "")
 								{
-								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->profile_path.'">';
+								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
 								}
 								else
 								{
