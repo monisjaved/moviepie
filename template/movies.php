@@ -127,6 +127,7 @@ $j=json_decode($u);
 									{
 									echo "No Production Companies listed for this movie" ;
 									}
+									echo '<a href="http://www.imdb.com/'.$j->imdb_id.'">Go To IMDB page</a>';
 									?>
 									
 									</ul>
