@@ -28,7 +28,7 @@ $j=json_decode($u);
 		</form></center>
 			    <h2><?php echo $j->title ; 
 			     $name= $j->title;
-			     $date=$j->release_dates->theater ;
+			     $date=$j->release_date;
 			     $rating_1=$j->mpaa_rating;
 			      ?>
 			    </h2>
