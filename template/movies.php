@@ -127,7 +127,6 @@ $j=json_decode($u);
 									{
 									echo "No Production Companies listed for this movie" ;
 									}
-									echo '<a href="http://www.imdb.com/'.$j->imdb_id.'">Go To IMDB page</a>';
 									?>
 									
 									</ul>
@@ -139,6 +138,7 @@ $j=json_decode($u);
 											echo "<b>Charecter :</b> ". $data->characters ."<br/><br/>" ;
 										}
 										 ?>
+									echo '<a href="http://www.imdb.com/title/'.$j->imdb_id.'">Go To IMDB page</a>';
 							            
 						</div>
 						<div class="tab-pane" id="tabs-side">
