@@ -126,6 +126,26 @@ $j=json_decode($u);
 						</div>
 						<div class="tab-pane" id="tabs-side">
 							<h3>Movie Facts </h3>
+							<?php 
+			$url="http://api.themoviedb.org/3/movie/".$_GET['mid']."/casts?api_key=4cff43a8a3eec60c17cb778d7d56214a";
+								$referer=$url ; 
+								$u=getPage($url, $referer, $timeout, $header);
+								$j2=json_decode($u);
+								$count=0; 
+								foreach ($j2->cast as $c)
+								{
+								echo "<div>" ;
+								echo "<a href='movies.php?mid=".$c->id." '>";
+								echo "<h3>".$c->name."</h3>&nbsp&nbsp";
+								echo "<h3>(".$c->character_name.")</h3><br/>";
+								$count++; 
+								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
+								echo /t.$c->order ;
+								echo "</a></div>" ;
+								}
+								if( $count == 0)
+								echo "No similar movies found "  ;
+								?>				
 							MPAA Ratings  :  <?php echo $j->mpaa_rating ; ?><br/>
 									Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
 									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>
