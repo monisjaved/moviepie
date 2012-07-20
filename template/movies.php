@@ -30,6 +30,7 @@ $j=json_decode($u);
 			     $name= $j->title;
 			     $date=$j->release_date;
 			     $rating_1=$j->mpaa_rating;
+				 echo $date;
 			      ?>
 			    </h2>
 			   
