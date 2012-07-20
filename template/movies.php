@@ -101,9 +101,9 @@ $j=json_decode($u);
 									<h4>
 									<ul type="solid">
 									<?php
-									foreach($json_o->production_companies as $pc)
+									foreach($j->production_companies as $pc)
 									{
-									echo '<li>Name: '.$pc->name.'</li>';
+									echo '<li>Name		: '.$pc->name.'</li>';
 									}
 									?>
 									</ul>
