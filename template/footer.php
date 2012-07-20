@@ -132,7 +132,7 @@ $("#sample").autocomplete({
 
 
 }).data("autocomplete")._renderItem = function (ul, item) {
-    var img = $("<img>").attr("src", "http://cf2.imgobject.com/t/p/w500/"+item.thumb);
+    var img = $("<img>").attr("src", "http://cf2.imgobject.com/t/p/w92/"+item.thumb);
     var link = $("<a>").text(item.label).prepend(img);
     return $("<li>").data("item.autocomplete", item).append(link).appendTo(ul);
 };
