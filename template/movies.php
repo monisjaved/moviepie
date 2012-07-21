@@ -208,13 +208,14 @@ $j=json_decode($u);
 								echo "<div>" ;
 								echo "<a href='movies.php?mid=".$r->id.">";
 								echo "<h3>".$r->title."&nbsp&nbsp";
-								if($r->vote_average == 0)
+								$rate=$r->vote_average;
+								if($rate == 0)
 								{
 								echo "Rating:&nbspNot Rated";
 								}
 								else 
 								{
-								echo "Rating:&nbsp".$r->vote_average;
+								echo "Rating:&nbsp".$rate;
 								}
 								echo "</h3>"
 								$count++;
