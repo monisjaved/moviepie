@@ -51,7 +51,7 @@
 				echo "<div>";
 				echo "<a href='movies.php?mid=".$data->id."'>";
 				d($data->title) ; 
-				echo '<img src="http://cf2.imgobject.com/t/p/w45'.$data->poster_path.'>'; 
+				echo '<img src="http://cf2.imgobject.com/t/p/w45'.$data->poster_path.'">'; 
 				echo "</a></div>"; 
 		}
 ?>
