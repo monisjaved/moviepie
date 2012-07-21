@@ -170,7 +170,6 @@ $j=json_decode($u);
 								else
 								echo "<br/>";
 								$count++;
-								echo $c->order ;
 								echo "<br/><br/></h3></a></div>" ;
 								}
 								if( $count == 0)
@@ -212,7 +211,7 @@ $j=json_decode($u);
 								$count++;
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
 								echo $r->vote_average ;
-								echo "<br/></a></div>" ;
+								echo "<br/><br/></a></div>" ;
 								}
 								if( $count == 0)
 								echo "No similar movies found "  ;
