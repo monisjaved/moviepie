@@ -198,6 +198,7 @@ $j=json_decode($u);
 									{
 									echo "No Production Companies listed for this movie" ;
 									}
+									?>
 									
 									<h3>Cast :</h3><br/>
 									<?php foreach (  $j->abridged_cast as $data )
