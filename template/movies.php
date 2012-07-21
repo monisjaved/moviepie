@@ -143,6 +143,9 @@ $j=json_decode($u);
 										}
 									echo '<a href="http://www.imdb.com/title/'.$j->imdb_id.'" target="_blank">Go To IMDB page</a>';	
 									?>
+									<br/>
+									<br/>
+									<br/>
 									
 							            
 						</div>
