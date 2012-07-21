@@ -209,6 +209,8 @@ $j=json_decode($u);
 								echo "<a href='movies.php?mid=".$r->id." '>";
 								if($r->vote_average != 0)
 								echo "<h3>".$r->title."&nbsp&nbspRating:&nbsp".$r->vote_average."</h3>";
+								else
+								echo "<h3>".$r->title."&nbsp&nbspRating:&nbspNot Rated</h3>";
 								$count++;
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
 								echo "<br/><br/></a></div>" ;
