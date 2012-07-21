@@ -154,6 +154,11 @@ $j=json_decode($u);
 								{
 								echo "<div>" ;
 								echo "<a href='movies.php?mid=".$c->id." '>";
+								echo "<h3>".$c->name."&nbsp&nbsp";
+								if($c->character_name)
+								{
+								echo "(".$c->character_name.")</h3><br/>";
+								}
 								$count++;
 								if($c->profile_path)
 								{
@@ -163,12 +168,7 @@ $j=json_decode($u);
 								{
 								echo '<img src="..//img/noimg.jpg" alt="no image found" width=185>';
 								}
-								echo $c->order."&nbsp&nbsp" ;
-								echo "<h3>".$c->name."&nbsp&nbsp";
-								if($c->character_name)
-								{
-								echo "(".$c->character_name.")</h3><br/>";
-								}
+								echo $c->order ;
 								echo "<br/></a></div>" ;
 								}
 								if( $count == 0)
