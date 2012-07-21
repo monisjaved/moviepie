@@ -206,7 +206,7 @@ $j=json_decode($u);
 								foreach ($j1->results as $r)
 								{
 								echo "<div>" ;
-								echo "<a href='movies.php?mid=".$r->id." '>";
+								echo "<a href='movies.php?mid=".$r->id.">";
 								echo "<h3>".$r->title."&nbsp&nbsp";
 								if($r->vote_average=="0")
 								{
