@@ -153,7 +153,7 @@ $j=json_decode($u);
 								foreach ($j2->cast as $c)
 								{
 								echo "<div>" ;
-								echo "<a href='movies.php?mid=".$c->id." '>";
+								echo "<a href='movies.php?mid=".$c->id." '><h3>";
 								if($c->profile_path)
 								{
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'" alt="'.$c->profile_path.'">';
@@ -162,16 +162,16 @@ $j=json_decode($u);
 								{
 								echo '<img src="..//img/noimg.jpg" alt="no image found" width=185>';
 								}
-								echo "<h3>".$c->name."&nbsp&nbsp";
+								echo $c->name."&nbsp&nbsp";
 								if($c->character_name)
 								{
-								echo "(".$c->character_name.")</h3><br/>";
+								echo "(".$c->character_name.")<br/>";
 								}
 								else
 								echo "<br/>";
 								$count++;
 								echo $c->order ;
-								echo "<br/><br/></a></div>" ;
+								echo "<br/><br/></h3></a></div>" ;
 								}
 								if( $count == 0)
 								echo "No similar movies found "  ;
