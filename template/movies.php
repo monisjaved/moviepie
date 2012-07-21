@@ -208,7 +208,7 @@ $j=json_decode($u);
 								echo "<div>" ;
 								echo "<a href='movies.php?mid=".$r->id.">";
 								echo "<h3>".$r->title."&nbsp&nbsp";
-								if($r->vote_average=="0")
+								if($r->vote_average == 0)
 								{
 								echo "Rating:&nbspNot Rated";
 								}
