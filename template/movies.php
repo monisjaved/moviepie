@@ -175,15 +175,29 @@ $j=json_decode($u);
 								if( $count == 0)
 								echo "No similar movies found "  ;
 								?>				
-							MPAA Ratings  :  <?php echo $j->mpaa_rating ; ?><br/>
-									Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
-									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>
-									Audience Ratings : <?php echo $j->ratings->audience_rating;?> <br/>
-									Audience Score  : <?php echo $j->ratings->audience_score;?> <br/>
+							Popularity  :  <?php echo $j->popularity ; ?><br/>
+									<!--Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
+									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>-->
+									Average Audience Rating : <?php echo $j->vote_average;?> <br/>
+									Audience Score  : <?php echo $j->vote_count;?> <br/>
+									Runtime			: <?php echo $j->runtime;?>&nbsp minutes <br/>
 									</b>
 									<br/>
 									<h3>Director :  <?php echo $j->abridged_directors ; ?></h3><br/>
-									<h3>Studio :  <?php echo $j->studio ; ?></h3><br/>
+									<h3>Production Companies		:</h3><br/>
+									<h4>
+									<ul type="solid">
+									<?php
+									$c1=0;
+									foreach($j->production_companies as $pc)
+									{
+									echo '<li>Name		: '.$pc->name ;
+									$c1++;
+									}
+									if( $c1 == 0 )
+									{
+									echo "No Production Companies listed for this movie" ;
+									}
 									
 									<h3>Cast :</h3><br/>
 									<?php foreach (  $j->abridged_cast as $data )
