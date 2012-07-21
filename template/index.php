@@ -42,16 +42,16 @@
          <div class="demo2">
 				<div style="position: absolute; margin: 0px; top: 0px; ">
 <?php 
-		$url="api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?limit=10&country=us&apikey=uuacu746nquzs3f2679dcyv6";
+		$url="http://api.themoviedb.org/3/movie/now-playing?api_key=4cff43a8a3eec60c17cb778d7d56214a";
 		$referer="http://apps.facebook.com/moviepie/" ; 
 		$u=getPage($url, $referer, $timeout, $header);
 		$j=json_decode($u);
-		foreach ( $j->movies as $data)
+		foreach ( $j->results as $data)
 		{
 				echo "<div>";
 				echo "<a href='movies.php?mid=".$data->id."'>";
 				d($data->title) ; 
-				echo "<img src=".$data->posters->thumbnail.">"; 
+				echo '<img src="http://cf2.imgobject.com/t/p/w45'.$data->poster_path.'>'; 
 				echo "</a></div>"; 
 		}
 ?>
