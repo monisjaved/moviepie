@@ -159,6 +159,8 @@ $j=json_decode($u);
 								{
 								echo "(".$c->character_name.")</h3><br/>";
 								}
+								else
+								echo "<br/>";
 								$count++;
 								if($c->profile_path)
 								{
