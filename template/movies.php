@@ -157,7 +157,10 @@ $j=json_decode($u);
 								echo "<h3>".$c->name."&nbsp&nbsp";
 								echo "(".$c->character_name.")</h3><br/>";
 								$count++;
+								if($c->profile_path)
+								{
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
+								}
 								echo $c->order ;
 								echo "<br/></a></div>" ;
 								}
