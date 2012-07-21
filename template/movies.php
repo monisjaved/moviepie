@@ -159,7 +159,11 @@ $j=json_decode($u);
 								$count++;
 								if($c->profile_path)
 								{
-								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'">';
+								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'" alt="'.$c->profile_path.'">';
+								}
+								else
+								{
+								echo '<img src="..//img/noimg.jpg" alt="no image found" width=185>';
 								}
 								echo $c->order ;
 								echo "<br/></a></div>" ;
