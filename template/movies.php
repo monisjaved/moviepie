@@ -103,7 +103,7 @@ $j=json_decode($u);
 									$c1=0;
 									foreach($j->genres as $g)
 									{
-									echo '<li>Name		: '.$g->name ;
+									echo '<li>'.$g->name ;
 									$c1++;
 									}
 									if( $c1 == 0 )
