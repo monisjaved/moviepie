@@ -207,7 +207,7 @@ $j=json_decode($u);
 								{
 								echo "<div>" ;
 								echo "<a href='movies.php?mid=".$r->id." '>";
-								echo "<h3>".$r->title."&nbsp&nbspRating:&nbsp".$r->vote_average"</h3>";
+								echo "<h3>".$r->title."&nbsp&nbspRating:&nbsp".$r->vote_average."</h3>";
 								$count++;
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
 								echo $r->vote_average ;
