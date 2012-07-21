@@ -135,12 +135,7 @@ $j=json_decode($u);
 									
 									</ul>
 									
-									<h3>Cast :</h3><br/>
-									<?php foreach (  $j->abridged_cast as $data )
-										{
-											echo "<b>Name :</b>". $data->name ."<br/>" ;
-											echo "<b>Charecter :</b> ". $data->characters ."<br/><br/>" ;
-										}
+									<?php 
 									echo '<a href="http://www.imdb.com/title/'.$j->imdb_id.'" target="_blank">Go To IMDB page</a>';	
 									?>
 									<br/>
