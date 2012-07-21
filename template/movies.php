@@ -206,20 +206,11 @@ $j=json_decode($u);
 								foreach ($j1->results as $r)
 								{
 								echo "<div>" ;
-								echo "<a href='movies.php?mid=".$r->id.">";
-								echo "<h3>".$r->title."&nbsp&nbsp";
-								$rate=$r->vote_average;
-								if($rate == 0)
-								{
-								echo "Rating:&nbspNot Rated";
-								}
-								else 
-								{
-								echo "Rating:&nbsp".$rate;
-								}
-								echo "</h3>"
+								echo "<a href='movies.php?mid=".$r->id." '>";
+								echo "<h3>".$r->title."</h3>";
 								$count++;
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$r->poster_path.'">';
+								echo $r->vote_average ;
 								echo "<br/><br/></a></div>" ;
 								}
 								if( $count == 0)
