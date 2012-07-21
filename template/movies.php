@@ -93,6 +93,7 @@ $j=json_decode($u);
 									<?php
 									if($j->homepage)
 									echo 'Homepage	:&nbsp<a href="'.$j->homepage.'" target="_blank">Go To Movie Homepage</a>';
+									?>
 									Popularity  :  <?php echo $j->popularity ; ?><br/>
 									<!--Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
 									Critics Score : <?php echo $j->ratings->critics_score;?> <br/>-->
