@@ -1,3 +1,13 @@
+<html>
+<head>
+<style type="text/css">
+body 
+{
+background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j->poster_path ; ?>"');
+background-color:#cccccc;
+}
+</style>
+</head>
 <?php 
  $tmdb = new TMDb('4cff43a8a3eec60c17cb778d7d56214a'); //change 'API-key' with yours
   //or even 'yaml'
@@ -312,5 +322,5 @@ $j=json_decode($u);
 		$res=$dbh->Query($sql);
 				
 				?>
-				
+</html>
 					
