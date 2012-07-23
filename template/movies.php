@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 $_SESSION['mid'] = $_GET['mid'];
 echo "<link rel='stylesheet' type='text/css' href='css/style.php' />"; 
  $tmdb = new TMDb('4cff43a8a3eec60c17cb778d7d56214a'); //change 'API-key' with yours
