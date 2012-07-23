@@ -35,7 +35,7 @@ $j=json_decode($u);
 			   
 			  
 			    <h3><?php echo $j->year ; ?></h3>
-			<img src="http://cf2.imgobject.com/t/p/w185<?php echo $j->poster_path ; ?>" > 
+			<img src="http://cf2.imgobject.com/t/p/w154<?php echo $j->poster_path ; ?>" > 
 			<h4><?php echo $j->critics_consensus ; ?></h4>
 			<?php
 	
