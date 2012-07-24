@@ -5,26 +5,18 @@ $mid = $_GET['mid'];
 	$u=getPage($url11, $referer, $timeout, $header);
 	$j11=json_decode($u);
  if (isset($_GET['mid']))
-<<<<<<< HEAD
 {
 ?>
-body 
-{
-background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->backdrop_path ; ?>');
-background-image:opacity:0.4
-background-color:#cccccc;
-}
-=======
-{?>
+<head>
 <style type="text/css">
 	body 
 	{
 		background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->backdrop_path ; ?>');
-		background-image:opacity:0.4
+		background-image:opacity:0.4;
 		background-color:#cccccc;
 	}
 </style>
->>>>>>> 371872b3be8cdd06383c44d1c35f1934c95bd5f1
+</head>
 <?
 }
 echo "<link rel='stylesheet' type='text/css' href='css/style.php' />"; 
