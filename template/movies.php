@@ -100,7 +100,7 @@ $j=json_decode($u);
 					<div class="well">
 					<ul id="sidenav" class="nav nav-pills nav-stacked">
 						<li class="active"><a href="#tabs-basic" data-toggle="tab"><strong>Description </strong></a></li>
-						<li><a href="#tabs-side" data-toggle="tab"><strong>Movie Facts </strong></a></li>
+						<li><a href="#tabs-side" data-toggle="tab"><strong>Crew </strong></a></li>
 						<li><a href="#tabs-stacked" data-toggle="tab"><strong>Similar Movies  </strong></a></li>
 						<li><a href="#pills-basic" data-toggle="tab"><strong>Backdrops</strong></a></li>
 					</ul>
@@ -169,7 +169,7 @@ $j=json_decode($u);
 							            
 						</div>
 						<div class="tab-pane" id="tabs-side">
-							<h3>Movie Facts </h3>
+							<h3>Crew </h3>
 							<?php 
 			$url="http://api.themoviedb.org/3/movie/".$_GET['mid']."/casts?api_key=4cff43a8a3eec60c17cb778d7d56214a";
 								$referer=$url ; 
