@@ -11,7 +11,7 @@ $mid = $_GET['mid'];
 <style type="text/css">
 	body 
 	{
-		background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->backdrop_path ; ?>');
+		background-image:url('http://cf2.imgobject.com/t/p/w500<?//php echo $j11->backdrop_path ; ?>');
 		background-repeat:no-repeat;
 		background-position:380px 150px;
 		background-size:870px 280px;
