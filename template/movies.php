@@ -1,4 +1,17 @@
 <?php
+$mid = $_GET['mid'];
+	$url11="http://api.themoviedb.org/3/movie/".$mid."?api_key=4cff43a8a3eec60c17cb778d7d56214a";
+	$referer=$url11 ; 
+	$u=getPage($url11, $referer, $timeout, $header);
+	$j11=json_decode($u);
+ if (isset($_GET['mid']))
+{?>
+body 
+{
+background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->poster_path ; ?>');
+background-color:#cccccc;
+}
+<?php
 echo "<link rel='stylesheet' type='text/css' href='css/style.php' />"; 
  $tmdb = new TMDb('4cff43a8a3eec60c17cb778d7d56214a'); //change 'API-key' with yours
   //or even 'yaml'
