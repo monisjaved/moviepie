@@ -5,6 +5,7 @@ $mid = $_GET['mid'];
 	$u=getPage($url11, $referer, $timeout, $header);
 	$j11=json_decode($u);
  if (isset($_GET['mid']))
+<<<<<<< HEAD
 {
 ?>
 body 
@@ -12,6 +13,16 @@ body
 background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->poster_path ; ?>');
 background-color:#cccccc;
 }
+=======
+{?>
+<style type="text/css">
+	body 
+	{
+		background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->poster_path ; ?>');
+		background-color:#cccccc;
+	}
+</style>
+>>>>>>> 371872b3be8cdd06383c44d1c35f1934c95bd5f1
 <?
 }
 echo "<link rel='stylesheet' type='text/css' href='css/style.php' />"; 
