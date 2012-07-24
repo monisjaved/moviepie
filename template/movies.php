@@ -179,7 +179,7 @@ $j=json_decode($u);
 								foreach ($j2->cast as $c)
 								{
 								echo "<div>" ;
-								echo "<a href='movies.php?mid=".$c->id." '><h3>";
+								echo "<a href='#'><h3>";
 								if($c->profile_path)
 								{
 								echo '<img src="http://cf2.imgobject.com/t/p/w185'.$c->profile_path.'" alt="'.$c->profile_path.'">';
@@ -199,7 +199,7 @@ $j=json_decode($u);
 								echo "<br/><br/></h3></a></div>" ;
 								}
 								if( $count == 0)
-								echo "No similar movies found "  ;
+								echo "No crew info found "  ;
 								?>				
 							Popularity  :  <?php echo $j->popularity ; ?><br/>
 									<!--Critics Ratings : <?php echo $j->ratings->critics_rating ; ?><br/>
