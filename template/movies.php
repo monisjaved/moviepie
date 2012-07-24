@@ -16,22 +16,6 @@ $mid = $_GET['mid'];
 		background-size:94% 100%;
 		background-color:#cccccc;
 	}
-	div.transbox
-	{
-		width:400px;
-		height:180px;
-		margin:30px 50px;
-		background-color:#ffffff;
-		border:1px solid black;
-		opacity:0.6;
-		filter:alpha(opacity=60); /* For IE8 and earlier */
-	}
-	div.transbox p
-	{
-		margin:30px 40px;
-		font-weight:bold;
-		color:#000000;
-	}
 </style>
 </head>
 <?
@@ -71,8 +55,7 @@ $j=json_decode($u);
 			      ?>
 			    </h2>
 			   
-			<div class="transbox">
-			<p>
+			  
 			    <h3><?php echo $j->year ; ?></h3>
 			<a href="http://cf2.imgobject.com/t/p/w500<?php echo $j->poster_path ; ?>" target="_blank">
 				<img src="http://cf2.imgobject.com/t/p/w500<?php echo $j->poster_path ; ?>" width="130">
@@ -280,8 +263,6 @@ $j=json_decode($u);
 						<div class="tab-pane" id="pills-basic">
 							<h3>Back drops</h3>
 							
-						</div>
-						</p>
 						</div>
 						 
 					
