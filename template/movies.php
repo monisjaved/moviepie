@@ -12,6 +12,7 @@ $mid = $_GET['mid'];
 	body 
 	{
 		background-image:url('http://cf2.imgobject.com/t/p/w500<?php echo $j11->backdrop_path ; ?>');
+		background-repeat:no-repeat;
 		background-image:opacity:0.4;
 		background-color:#cccccc;
 	}
