@@ -7,7 +7,7 @@ $mid = $_GET['mid'];
  if (isset($_GET['mid']))
 {
 ?>
-<head>
+<!--<head>
 <style type="text/css">
 	body 
 	{
@@ -17,7 +17,7 @@ $mid = $_GET['mid'];
 		background-size:870px 280px;
 	}
 </style>
-</head>
+</head>-->
 <?
 }
 echo "<link rel='stylesheet' type='text/css' href='css/style.php' />"; 
